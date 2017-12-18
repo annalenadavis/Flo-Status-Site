@@ -1,0 +1,24 @@
+
+$phone__width: 320px;
+$tablet__width: 650px;
+$desktop__width: 800px;
+
+//media query mixins
+
+@mixin phone{
+    @media(min-width: #{$phone__width}){
+        @content
+    }
+}
+
+@mixin tablet{
+    @media(min-width: #{$tablet__width}){
+        @content
+    }
+}
+
+@mixin desktop{
+    @media(min-width: #{$desktop__width}){
+        @content
+    }
+}
