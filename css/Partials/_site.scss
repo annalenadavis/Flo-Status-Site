@@ -6,3 +6,30 @@ body {
   color: $black;
   background: $bg-primary;
 }
+
+// header {
+//   min-height: 150px;
+//   width: 100vw;
+// }
+
+.header_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 75px 75px;
+  grid-template-areas:
+    "mainheader contact"
+    "mainheader nav";
+}
+
+.main_header {
+  grid-area: mainheader;
+  background-color: $yellow;
+}
+.contact {
+  grid-area: contact;
+  background-color: $green;
+}
+.nav {
+  grid-area: nav;
+  background-color: $blue;
+}

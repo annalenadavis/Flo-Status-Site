@@ -1,0 +1,26 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
+  background: white; }
+
+.header_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 75px 75px;
+  grid-template-areas: "mainheader contact" "mainheader nav"; }
+
+.main_header {
+  grid-area: mainheader;
+  background-color: #fca90b; }
+
+.contact {
+  grid-area: contact;
+  background-color: #005960; }
+
+.nav {
+  grid-area: nav;
+  background-color: #2b98f0; }
+
+/*# sourceMappingURL=style.css.map */
