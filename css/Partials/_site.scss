@@ -20,7 +20,6 @@ body {
     "mainheader contact"
     "mainheader nav";
 }
-
 .main_header {
   grid-area: mainheader;
   background-color: $yellow;
@@ -31,5 +30,37 @@ body {
 }
 .nav {
   grid-area: nav;
+  background-color: $blue;
+}
+
+.showcase_grid {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "video1 video2"
+}
+.video_1 {
+    grid-area: video1;
+    background-color: $darkgray;
+    min-height: 500px;
+  }
+.video_2 {
+    grid-area: video2;
+    background-color: $lightgray;
+    min-height: 500px;
+  }
+
+.main_grid {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 75px 75px 75px;
+}
+
+.item {
   background-color: $blue;
 }
