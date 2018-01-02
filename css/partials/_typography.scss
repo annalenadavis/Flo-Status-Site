@@ -5,3 +5,36 @@ $regular: 400; //Raleway
 $medium: 500; //Raleway and Maven Pro
 $semi-bold: 600; //Raleway
 $black: 900; //Maven Pro
+
+
+h1 {
+  font-family: $font-accent;
+  font-weight: $black;
+  color: $blue;
+  margin: 10px;
+  @include desktop {
+    font-size: 36px;
+  }
+  @include tablet {
+    font-size: 32px;
+  }
+  @include phone {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font-family:$font-primary;
+  font-weight: $regular;
+  color: $black;
+  margin: 10px;
+  @include desktop {
+    font-size: 36px;
+  }
+  @include tablet {
+    font-size: 32px;
+  }
+  @include phone {
+    font-size: 28px;
+  }
+}

@@ -33,6 +33,7 @@ body {
   background-color: $blue;
 }
 
+
 .showcase_grid {
   display: grid;
   overflow: hidden;
@@ -42,6 +43,7 @@ body {
   grid-template-areas:
     "video1 video2"
 }
+
 .video_1 {
     grid-area: video1;
     background-color: $darkgray;
@@ -53,14 +55,39 @@ body {
     min-height: 500px;
   }
 
+  .main_row {
+    width: 75vw;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .main_row h2 {
+    padding-left: 25px;
+  }
+
 .main_grid {
   width: 50%;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 75px 75px 75px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.main_grid img {
+  width: 240px;
+}
+.image_marker {
+    height: 120px;
+    background-color: $yellow;
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: -16px;
+    z-index: 100;
 }
 
 .item {
   background-color: $blue;
+  position: relative;
 }
