@@ -28,6 +28,11 @@ h2 {
     h2 {
       font-size: 28px; } }
 
+p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px; }
+
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -84,8 +89,9 @@ body {
   width: 50%;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
+  grid-template-columns: 240px 240px;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center; }
 
 .main_grid img {
   width: 240px; }
@@ -97,11 +103,21 @@ body {
   position: absolute;
   top: 50%;
   margin-top: -50px;
-  left: -16px;
   z-index: 100; }
 
+.image_marker_left {
+  left: -16px;
+  position: absolute; }
+
+.image_marker_right {
+  right: -16px;
+  position: absolute; }
+
 .item {
-  background-color: #2b98f0;
   position: relative; }
+
+.item p {
+  margin-left: 20px;
+  margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
