@@ -33,7 +33,6 @@ body {
   background-color: $blue;
 }
 
-
 .showcase_grid {
   display: grid;
   overflow: hidden;
@@ -72,20 +71,34 @@ body {
   grid-template-columns: 240px 240px;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
+  padding-bottom: 75px;
 }
 
-.main_grid img {
+.image_1 {
+  height: 240px;
   width: 240px;
+  background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
+              url("../images/beach_training2.jpg");
+}
+.image_2 {
+  height: 240px;
+  width: 240px;
+  background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
+              url("../images/garage_training2.jpg");
+}
+.image_3 {
+  height: 240px;
+  width: 240px;
+  background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
+              url("../images/gloves2.jpg");
 }
 
 .image_marker {
     height: 120px;
     background-color: $yellow;
     width: 16px;
-    position: absolute;
     top: 50%;
     margin-top: -50px;
-    // left: -16px;
     z-index: 100;
 }
 
@@ -103,7 +116,36 @@ body {
   position: relative;
 }
 
-.item p {
+.item_textbox_right {
+  width: 220px;
+  height: 240px;
   margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item_textbox_left {
   margin-right: 20px;
+  width: 220px;
+  height: 240px;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row_testimonial {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.textbox_testimonial {
+  width: 50%;
+  text-align: center;
+}
+
+.textbox_testimonial a {
+  text-transform:uppercase;
 }
