@@ -22,17 +22,48 @@ body {
 }
 .main_header {
   grid-area: mainheader;
-  background-color: $yellow;
+}
+.logo_img {
+  width: 210px;
+  padding-left: 25px;
+  padding-top: 15px;
+}
+.main_header h2 {
+  font-size: 26px;
+  margin: 0 0 0 40px;
+}
+.main_header h3 {
+  margin-left: 60px;
 }
 .contact {
   grid-area: contact;
-  background-color: $green;
+  text-align: right;
+  height: 100%;
+  line-height: 75px;
+}
+.contact li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.fa {
+  padding: 10px;
 }
 .nav {
   grid-area: nav;
-  background-color: $blue;
+  text-align: right;
+  line-height: 75px;
 }
-
+.nav li {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 25px;
+}
+.nav a {
+  color: black;
+}
+.nav a:hover {
+  color: $blue;
+}
 .showcase_grid {
   display: grid;
   overflow: hidden;

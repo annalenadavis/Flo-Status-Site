@@ -28,10 +28,20 @@ h2 {
     h2 {
       font-size: 28px; } }
 
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #c0c0c0; }
+
 p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px; }
+
+.contact p {
+  color: #c0c0c0;
+  font-size: 16px; }
 
 a {
   font-family: "Raleway", sans-serif;
@@ -39,6 +49,10 @@ a {
   color: #2b98f0;
   font-size: 16px;
   text-decoration: none; }
+
+.fa {
+  color: #fca90b;
+  font-size: 26px; }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -54,16 +68,48 @@ body {
   grid-template-areas: "mainheader contact" "mainheader nav"; }
 
 .main_header {
-  grid-area: mainheader;
-  background-color: #fca90b; }
+  grid-area: mainheader; }
+
+.logo_img {
+  width: 210px;
+  padding-left: 25px;
+  padding-top: 15px; }
+
+.main_header h2 {
+  font-size: 26px;
+  margin: 0 0 0 40px; }
+
+.main_header h3 {
+  margin-left: 60px; }
 
 .contact {
   grid-area: contact;
-  background-color: #005960; }
+  text-align: right;
+  height: 100%;
+  line-height: 75px; }
+
+.contact li {
+  display: inline-block;
+  margin-right: 15px; }
+
+.fa {
+  padding: 10px; }
 
 .nav {
   grid-area: nav;
-  background-color: #2b98f0; }
+  text-align: right;
+  line-height: 75px; }
+
+.nav li {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 25px; }
+
+.nav a {
+  color: black; }
+
+.nav a:hover {
+  color: #2b98f0; }
 
 .showcase_grid {
   display: grid;

@@ -39,10 +39,22 @@ h2 {
   }
 }
 
+h3 {
+  font-family: $font-primary;
+  font-weight: $regular;
+  font-size: 22px;
+  color: $lightgray;
+}
+
 p {
   font-family: $font-primary;
   font-weight: $regular;
   font-size: 18px;
+}
+
+.contact p {
+  color: $lightgray;
+  font-size: 16px;
 }
 
 a {
@@ -51,4 +63,9 @@ a {
   color: $blue;
   font-size: 16px;
   text-decoration: none;
+}
+
+.fa {
+  color: $yellow;
+  font-size: 26px;
 }
