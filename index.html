@@ -39,9 +39,12 @@
       </header>
 
         <div class="showcase_grid">
-          <div class="container video_1">
+          <div class="container video_1_box">
           </div> <!--end video_1-->
-          <div class="container video_2">
+          <div class="container video_2_box">
+            <video playsinline autoplay muted loop poster="video2_poster.jpg" id="video2">
+              <source src="images/video_2.mp4" type="video/mp4">
+            </video>
           </div> <!--end video_2-->
         </div> <!--showcase end-->
 
@@ -94,7 +97,28 @@
         </div><!--end textbox-->
       </div><!--end row-->
 
+      <div class="row row_banner">
 
+      </div><!--end row-->
+
+      <form>
+        <h1>Start Training Today</h1>
+          <label for='first_name'>First Name:</label>
+          <input type="text" id="first_name" name="first_name">
+
+          <label for='last_name'>Last Name:</label>
+          <input type="text" id="last_name" name="last_name">
+
+          <label for='email'>Email:</label>
+          <input type="email" id="email" name="user_email">
+
+          <label for='phone'>Phone:</label>
+          <input type="number" id="number" name="user_number">
+
+          <label for="comment">Message</label>
+          <textarea id="comment" name="user_comment"></textarea>
+          <button type="submit">Submit</button>
+       </form>
 
          <script src="js/main.js"></script>
     </body>

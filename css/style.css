@@ -40,7 +40,7 @@ p {
   font-size: 18px; }
 
 .contact p {
-  color: #c0c0c0;
+  color: #808080;
   font-size: 16px; }
 
 a {
@@ -119,15 +119,20 @@ body {
   grid-gap: 10px;
   grid-template-areas: "video1 video2"; }
 
-.video_1 {
+.video_1_box {
   grid-area: video1;
   background-color: #808080;
   min-height: 500px; }
 
-.video_2 {
+.video_2_box {
   grid-area: video2;
-  background-color: #c0c0c0;
-  min-height: 500px; }
+  min-height: 500px;
+  background-color: #c0c0c0; }
+
+video#video2 {
+  width: auto;
+  height: auto;
+  background: url(../images/video2_poster.jpg) no-repeat; }
 
 .main_row {
   width: 75vw;
@@ -209,5 +214,111 @@ body {
 
 .textbox_testimonial a {
   text-transform: uppercase; }
+
+.row_banner {
+  height: 200px;
+  background-image: url("../images/jason-wong-351890-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 30px; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 8px; }
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: left; }
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #005960;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #ebebeb;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 20px; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0; }
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px; }
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #005960;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #005960;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px; }
+
+fieldset {
+  margin-bottom: 30px;
+  border: none; }
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px; }
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #808080; }
+
+label.light {
+  font-weight: 300;
+  display: inline; }
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 100%; }
+
+@media screen and (min-width: 480px) {
+  form {
+    max-width: 480px; } }
 
 /*# sourceMappingURL=style.css.map */
