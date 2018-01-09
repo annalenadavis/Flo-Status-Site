@@ -16,20 +16,39 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 75px 75px;
+  @include desktop {
   grid-template-areas:
     "mainheader contact"
     "mainheader nav";
+  }
+  @include tablet {
+    grid-template-areas:
+    "mainheader tabletnav"
+    "mainheader .";
+  }
+  @include phone {
+    grid-template-rows: 100px 100px;
+    grid-template-areas:
+    "mainheader mainheader"
+    "tabletnav tabletnav";
+  }
 }
 .main_header {
   grid-area: mainheader;
+  @include phone {
+    text-align: center;
+  }
 }
 .logo_img {
-  width: 210px;
+  width: 200px;
   padding-left: 25px;
-  padding-top: 15px;
+  padding-top: 10px;
+  @include phone {
+    width: 150px;
+    padding-left: 0;
+  }
 }
 .main_header h2 {
-  font-size: 26px;
   margin: 0 0 0 40px;
 }
 .main_header h3 {
@@ -41,12 +60,12 @@ body {
   height: 100%;
   line-height: 75px;
 }
-.contact li {
+.contact li, .tablet_nav li {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .fa {
-  padding: 10px;
+  padding: 5px;
 }
 .nav {
   grid-area: nav;
@@ -63,6 +82,26 @@ body {
 }
 .nav a:hover {
   color: $blue;
+}
+.nav, .contact {
+  @include phone {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+.tablet_nav {
+  grid-area: tabletnav;
+  text-align: right;
+  align-self: end;
+  @include desktop {
+    display: none;
+  }
+  @include phone {
+    text-align: center;
+    align-self: center;
+  }
 }
 .showcase_grid {
   display: grid;
@@ -98,12 +137,17 @@ body {
     background: url(../images/video2_poster.jpg) no-repeat;
   }
 
+  .main_content {
+    background-color: $bgaccent;
+  }
+
   .main_row {
     width: 75vw;
     margin: auto;
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .main_row h2 {
     padding-left: 25px;
   }
@@ -200,4 +244,25 @@ body {
   background-size: cover;
   background-position: center center;
   margin-bottom: 30px;
+}
+
+footer {
+  background-color: $bgaccent;
+  height: 100px;
+}
+.logo_img_small {
+  width: 160px;
+  padding-left: 25px;
+  padding-top: 15px;
+  float: left;
+}
+.contact_footer {
+  text-align: right;
+  height: 100%;
+  line-height: 100px;
+  display: block;
+}
+.contact_footer li {
+  display: inline-block;
+  margin-right: 15px;
 }

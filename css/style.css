@@ -3,13 +3,13 @@ h1 {
   font-weight: 900;
   color: #2b98f0;
   margin: 10px; }
-  @media (min-width: 800px) {
-    h1 {
-      font-size: 36px; } }
-  @media (min-width: 650px) {
+  @media (min-width: 992px) {
     h1 {
       font-size: 32px; } }
-  @media (min-width: 320px) {
+  @media (min-width: 700px) and (max-width: 991px) {
+    h1 {
+      font-size: 30px; } }
+  @media (min-width: 300px) and (max-width: 699px) {
     h1 {
       font-size: 28px; } }
 
@@ -18,21 +18,24 @@ h2 {
   font-weight: 400;
   color: 900;
   margin: 10px; }
-  @media (min-width: 800px) {
+  @media (min-width: 992px) {
     h2 {
-      font-size: 36px; } }
-  @media (min-width: 650px) {
+      font-size: 26px; } }
+  @media (min-width: 700px) and (max-width: 991px) {
     h2 {
-      font-size: 32px; } }
-  @media (min-width: 320px) {
+      font-size: 26px; } }
+  @media (min-width: 300px) and (max-width: 699px) {
     h2 {
-      font-size: 28px; } }
+      font-size: 20px; } }
 
 h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 22px;
   color: #c0c0c0; }
+  @media (min-width: 300px) and (max-width: 699px) {
+    h3 {
+      font-size: 18px; } }
 
 p {
   font-family: "Raleway", sans-serif;
@@ -64,19 +67,34 @@ body {
 .header_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 75px 75px;
-  grid-template-areas: "mainheader contact" "mainheader nav"; }
+  grid-template-rows: 75px 75px; }
+  @media (min-width: 992px) {
+    .header_grid {
+      grid-template-areas: "mainheader contact" "mainheader nav"; } }
+  @media (min-width: 700px) and (max-width: 991px) {
+    .header_grid {
+      grid-template-areas: "mainheader tabletnav" "mainheader ."; } }
+  @media (min-width: 300px) and (max-width: 699px) {
+    .header_grid {
+      grid-template-rows: 100px 100px;
+      grid-template-areas: "mainheader mainheader" "tabletnav tabletnav"; } }
 
 .main_header {
   grid-area: mainheader; }
+  @media (min-width: 300px) and (max-width: 699px) {
+    .main_header {
+      text-align: center; } }
 
 .logo_img {
-  width: 210px;
+  width: 200px;
   padding-left: 25px;
-  padding-top: 15px; }
+  padding-top: 10px; }
+  @media (min-width: 300px) and (max-width: 699px) {
+    .logo_img {
+      width: 150px;
+      padding-left: 0; } }
 
 .main_header h2 {
-  font-size: 26px;
   margin: 0 0 0 40px; }
 
 .main_header h3 {
@@ -88,12 +106,12 @@ body {
   height: 100%;
   line-height: 75px; }
 
-.contact li {
+.contact li, .tablet_nav li {
   display: inline-block;
-  margin-right: 15px; }
+  margin-right: 10px; }
 
 .fa {
-  padding: 10px; }
+  padding: 5px; }
 
 .nav {
   grid-area: nav;
@@ -110,6 +128,25 @@ body {
 
 .nav a:hover {
   color: #2b98f0; }
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .nav, .contact {
+    display: none; } }
+@media (min-width: 700px) and (max-width: 991px) {
+  .nav, .contact {
+    display: none; } }
+
+.tablet_nav {
+  grid-area: tabletnav;
+  text-align: right;
+  align-self: end; }
+  @media (min-width: 992px) {
+    .tablet_nav {
+      display: none; } }
+  @media (min-width: 300px) and (max-width: 699px) {
+    .tablet_nav {
+      text-align: center;
+      align-self: center; } }
 
 .showcase_grid {
   display: grid;
@@ -133,6 +170,9 @@ video#video2 {
   width: auto;
   height: auto;
   background: url(../images/video2_poster.jpg) no-repeat; }
+
+.main_content {
+  background-color: #ebebeb; }
 
 .main_row {
   width: 75vw;
@@ -222,6 +262,26 @@ video#video2 {
   background-position: center center;
   margin-bottom: 30px; }
 
+footer {
+  background-color: #ebebeb;
+  height: 100px; }
+
+.logo_img_small {
+  width: 160px;
+  padding-left: 25px;
+  padding-top: 15px;
+  float: left; }
+
+.contact_footer {
+  text-align: right;
+  height: 100%;
+  line-height: 100px;
+  display: block; }
+
+.contact_footer li {
+  display: inline-block;
+  margin-right: 15px; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -233,7 +293,7 @@ form {
   padding: 10px 20px;
   border-radius: 8px; }
 
-h1 {
+form h1 {
   margin: 0 0 30px 0;
   text-align: left; }
 

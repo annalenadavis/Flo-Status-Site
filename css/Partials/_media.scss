@@ -1,24 +1,24 @@
 
-$phone__width: 320px;
-$tablet__width: 650px;
-$desktop__width: 800px;
+$phone__width: 300px;
+$tablet__width: 700px;
+$desktop__width: 992px;
 
 //media query mixins
 
-@mixin phone{
-    @media(min-width: #{$phone__width}){
-        @content
+@mixin phone {
+    @media(min-width: #{$phone__width}) and (max-width: #{$tablet__width - 1px}){
+        @content;
     }
 }
 
-@mixin tablet{
-    @media(min-width: #{$tablet__width}){
-        @content
+@mixin tablet {
+    @media(min-width: #{$tablet__width}) and (max-width: #{$desktop__width - 1px}){
+        @content;
     }
 }
 
-@mixin desktop{
+@mixin desktop {
     @media(min-width: #{$desktop__width}){
-        @content
+        @content;
     }
 }

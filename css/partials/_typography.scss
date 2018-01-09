@@ -13,10 +13,10 @@ h1 {
   color: $blue;
   margin: 10px;
   @include desktop {
-    font-size: 36px;
+    font-size: 32px;
   }
   @include tablet {
-    font-size: 32px;
+    font-size: 30px;
   }
   @include phone {
     font-size: 28px;
@@ -29,13 +29,13 @@ h2 {
   color: $black;
   margin: 10px;
   @include desktop {
-    font-size: 36px;
+    font-size: 26px;
   }
   @include tablet {
-    font-size: 32px;
+    font-size: 26px;
   }
   @include phone {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
@@ -44,6 +44,9 @@ h3 {
   font-weight: $regular;
   font-size: 22px;
   color: $lightgray;
+  @include phone {
+    font-size: 18px;
+  }
 }
 
 p {
