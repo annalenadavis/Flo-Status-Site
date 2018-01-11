@@ -7,11 +7,6 @@ body {
   background: $bgprimary;
 }
 
-// header {
-//   min-height: 150px;
-//   width: 100vw;
-// }
-
 .header_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,6 +90,7 @@ body {
   grid-area: tabletnav;
   text-align: right;
   align-self: end;
+  position: relative;
   @include desktop {
     display: none;
   }
@@ -103,38 +99,76 @@ body {
     align-self: center;
   }
 }
+.tablet_nav_dropdown {
+  width: 150px;
+  height: auto;
+  background-color: $bgaccent;
+  position: absolute;
+  top: 75px;
+  right: 10px;
+  z-index: 100;
+  border: 2px $darkgray;
+  display: none;
+}
+.tablet_nav_dropdown li {
+  padding: 15px;
+}
+.tablet_nav_dropdown ul {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+.tablet_nav_dropdown i {
+  position: absolute;
+  right: 15px;
+  color: $darkgray;
+}
 .showcase_grid {
   display: grid;
-  overflow: hidden;
-  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  margin-top:20px;
+  margin-bottom: 20px;
   grid-auto-rows: auto;
   grid-gap: 10px;
   grid-template-areas:
-    "video1 video2"
+    "video1 video2";
+    justify-content: center;
+  @include desktop {
+    grid-template-columns: 500px 500px;
+    width: 1010px;
+  }
+  @include tablet {
+    grid-template-columns: 345px 345px;
+    width: 700px;
+  }
+  @include phone {
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+    "video1"
+    "video2";
+  }
 }
 
 .video_1_box {
     grid-area: video1;
     background-color: $darkgray;
-    min-height: 500px;
   }
 .video_2_box {
     grid-area: video2;
-    min-height: 500px;
-    background-color: $lightgray;
-    // background-image: url("../images/video_2.mp4");
-    // width: 100%;
-    // height: 100%;
-    // background-size: cover;
   }
 
   video#video2 {
-    // min-width: 100%;
-    // min-height: 100%;
-    width: auto;
-    height: auto;
-    // z-index: -100;
-    background: url(../images/video2_poster.jpg) no-repeat;
+    width: 500px;
+    height: 500px;
+    @include tablet {
+      width: 345px;
+      height: 345px;
+    }
+    @include phone {
+      width: 300px;
+      height: 300px;
+    }
+    // background: url(../images/video2_poster.jpg) no-repeat;
   }
 
   .main_content {
@@ -160,6 +194,27 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   padding-bottom: 75px;
+  @include phone {
+    grid-template-columns: 240px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "row-1"
+    "row-2"
+    "row-3"
+    "row-4"
+    "row-5"
+    "row-6"
+  }
+}
+
+@media(min-width: #{$phone__width}) and (max-width: #{$tablet__width - 1px}){
+  .item1 { grid-area: row-1;}
+  .item2 { grid-area: row-2;}
+  .item3{ grid-area: row-4;}
+  .item4 { grid-area: row-3;}
+  .item5 { grid-area: row-5;}
+  .item6 { grid-area: row-6;}
+
 }
 
 .image_1 {
@@ -205,6 +260,7 @@ body {
 }
 
 .item_textbox_right {
+  @include tablet {
   width: 220px;
   height: 240px;
   margin-left: 20px;
@@ -212,8 +268,24 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+  @include desktop {
+    width: 220px;
+    height: 240px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  @include phone {
+    text-align: center;
+    justify-content:flex-start;
+    margin: 30px 0 40px 0;
+    margin-right: 0;
+  }
+}
 
 .item_textbox_left {
+  @include tablet {
   margin-right: 20px;
   width: 220px;
   height: 240px;
@@ -222,6 +294,23 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+  @include desktop {
+  margin-right: 20px;
+  width: 220px;
+  height: 240px;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  }
+  @include phone {
+    text-align: center;
+    justify-content:flex-start;
+    margin: 30px 0 40px 0;
+    margin-right: 0;
+  }
+}
+
 
 .row_testimonial {
   display: flex;
@@ -255,14 +344,44 @@ footer {
   padding-left: 25px;
   padding-top: 15px;
   float: left;
+  @include phone {
+    padding: 20px;
+    float: none;
+  }
 }
-.contact_footer {
+.large_footer {
   text-align: right;
   height: 100%;
   line-height: 100px;
   display: block;
+  @include phone {
+    display: none;
+  }
 }
-.contact_footer li {
+.large_footer li {
   display: inline-block;
   margin-right: 15px;
+}
+
+.small_footer {
+  height: auto;
+  background-color: $bgaccent;
+  @include tablet {
+    display: none;
+  }
+}
+.footer_ul_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+}
+.footer_ul_icons li {
+  padding: 10px;
+}
+.footer_ul_contact {
+  text-align: center;
+}
+.footer_ul_contact li {
+  margin-top: 20px;
 }
