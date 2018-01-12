@@ -90,7 +90,6 @@ body {
   grid-area: tabletnav;
   text-align: right;
   align-self: end;
-  position: relative;
   @include desktop {
     display: none;
   }
@@ -99,29 +98,27 @@ body {
     align-self: center;
   }
 }
+.menu_bars {
+  position: relative;
+}
 .tablet_nav_dropdown {
   width: 150px;
   height: auto;
-  background-color: $bgaccent;
+  background-color: white;
   position: absolute;
-  top: 75px;
+  top: 80px;
   right: 10px;
   z-index: 100;
-  border: 2px $darkgray;
+  box-shadow:1px 1px 4px $darkgray;
+  border-radius: 3px;
   display: none;
 }
 .tablet_nav_dropdown li {
   padding: 15px;
 }
 .tablet_nav_dropdown ul {
-  text-align: center;
-  margin-bottom: 15px;
-  margin-top: 40px;
-}
-.tablet_nav_dropdown i {
-  position: absolute;
-  right: 15px;
-  color: $darkgray;
+  text-align: left;
+  margin: 10px 0 10px 10px;
 }
 .showcase_grid {
   display: grid;
@@ -157,7 +154,7 @@ body {
     grid-area: video2;
   }
 
-  video#video2 {
+.video2 {
     width: 500px;
     height: 500px;
     @include tablet {
@@ -367,6 +364,9 @@ footer {
   height: auto;
   background-color: $bgaccent;
   @include tablet {
+    display: none;
+  }
+  @include desktop {
     display: none;
   }
 }
