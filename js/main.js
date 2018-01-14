@@ -9,31 +9,34 @@ $("#menuBtn").click(function(){
 
 
 //Play Video when mouse hovers over it, pause when mouse leaves
-const video=document.getElementById("video");
-const toggle = document.getElementById('.toggle');
+const video2=document.getElementById("video2");
 
-video.addEventListener('mouseover', function(){
+video2.addEventListener('mouseover', function(){
   this.play();
 });
-video.addEventListener('mouseout', function(){
+video2.addEventListener('mouseout', function(){
   this.pause();
 })
 
+//Remove controls in desktop mode (need for tablet/phone since hover won't work)
+if (screen.width >= 992) {
+video2.controls = false;
+}
 
+//Play Video when mouse hovers over it, pause when mouse leaves
+const video1=document.getElementById("video1");
 
+video1.addEventListener('mouseover', function(){
+  this.play();
+});
+video1.addEventListener('mouseout', function(){
+  this.pause();
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
+//Remove controls in desktop mode (need for tablet/phone since hover won't work)
+if (screen.width >= 992) {
+video1.controls = false;
+}
 
 
 

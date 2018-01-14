@@ -193,11 +193,22 @@ body {
       grid-template-areas: "video1" "video2"; } }
 
 .video_1_box {
-  grid-area: video1;
-  background-color: #808080; }
+  grid-area: video1; }
 
 .video_2_box {
   grid-area: video2; }
+
+.video1 {
+  width: 500px;
+  height: 500px; }
+  @media (min-width: 700px) and (max-width: 991px) {
+    .video1 {
+      width: 345px;
+      height: 345px; } }
+  @media (min-width: 300px) and (max-width: 699px) {
+    .video1 {
+      width: 300px;
+      height: 300px; } }
 
 .video2 {
   width: 500px;
@@ -506,74 +517,6 @@ label.light {
 @media screen and (min-width: 480px) {
   form {
     max-width: 480px; } }
-.video_2_box {
-  postion: relative; }
-
 /* video button style */
-.video-control {
-  opacity: 0;
-  position: absolute;
-  width: 22.5%;
-  height: 40%;
-  top: 31%;
-  left: 38%;
-  transition: opacity 0.3s; }
-  .video-control:hover {
-    opacity: 1; }
-  .video-control:before, .video-control:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    max-width: 131px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: block;
-    position: absolute; }
-  .video-control:before {
-    background-image: url("https://joekang.co/assets/image-hosting/video-buttons-black.png");
-    background-position: 53% 98%;
-    background-size: 332%;
-    /*content: "\ea1c";*/ }
-  .video-control:after {
-    background-image: url("https://joekang.co/assets/image-hosting/video-buttons-black.png");
-    background-position: -292px -292px;
-    background-size: 332%;
-    /*content: "\ea1d";*/ }
-  .video-control.paused:after, .video-control.playing:before {
-    opacity: 0; }
-
-.video-control-show {
-  opacity: 0.5; }
-
-/* audio button style */
-.audio-control {
-  opacity: 1;
-  position: absolute;
-  width: 6%;
-  height: 9%;
-  bottom: 3%;
-  left: 2%;
-  transition: opacity 0.3s; }
-  .audio-control:hover {
-    opacity: 1; }
-  .audio-control:before, .audio-control:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    max-width: 36px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: block; }
-  .audio-control:before {
-    background-image: url("https://joekang.co/assets/image-hosting/video-buttons-black.png");
-    background-position: -1% -2%;
-    background-size: 254%; }
-  .audio-control:after {
-    background-image: url("https://joekang.co/assets/image-hosting/video-buttons-black.png");
-    background-position: 69% -1%;
-    background-size: 254%; }
-  .audio-control.unmuted:after, .audio-control.muted:before {
-    opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */
