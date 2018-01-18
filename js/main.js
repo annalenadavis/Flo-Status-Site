@@ -1,5 +1,51 @@
 $(document).ready(function() {
 
+//debounce for Scroll-header reveal so doesn't check too often
+function debounce(func, wait = 20, immediate = true) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+//Scroll-Header Reveal
+const scrollHeader = document.getElementById('scrollHeader');
+const mainContent = document.getElementById('mainContent');
+
+// When the user scrolls the page, execute checkHeight 
+// window.onscroll = function() {myFunction()};
+window.addEventListener('scroll', debounce(checkHeight), 500);
+
+
+// Get the offset position of the navbar
+var sticky = mainContent.offsetTop - 100;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function checkHeight() {
+  if (window.pageYOffset >= sticky) {
+    scrollHeader.classList.add("sticky");
+  } else {
+    scrollHeader.classList.remove("sticky");
+  }
+}
+
+
+// function checkHeight(e) {
+//   console.log(showcase.height + header.height);
+//   if (ScrollY = 575px) {
+//     scrollHeader.animate
+//   }
+//   //when scrollY = showcase+header heights I want scrollHeader to appear
+// }
+
 
 
 //Toggle the nav dropdown menu on tablets/phones with menu button

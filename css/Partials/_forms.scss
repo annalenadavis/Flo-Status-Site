@@ -78,9 +78,6 @@ button.start_today {
   display: inline-block;
   padding: 0;
   margin-top: 10px;
-  @include tablet {
-    display: none;
-  }
 }
 
 input.newsletter_email {
