@@ -12,7 +12,18 @@
         <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
+      <div class="tablet_nav_dropdown_background"></div>
       <header>
+        <div class="scroll_header">
+          <div class="scroll_header_left">
+              <button type="button" class="start_today">Start Training Today</button>
+           </div> <!--end header left-->
+           <div class="scroll_header_right"> 
+              <p>Sign up for my newsletter:</p>
+              <input type="email" id="newsletter_email" class="newsletter_email">
+              <input type="submit" value="subscribe" class="submit_btn">
+           </div><!--end header right-->
+          </div><!--end scroll_header-->
         <div class="header_grid">
           <div class="main_header">
             <a href="#"><img src="images/flow_logo.png" alt="Flow logo written in brush stroke with person kicking" class="logo_img"></a>
@@ -32,7 +43,7 @@
             <ul>
               <li><a href="#">Meet Stefan</a></li>
               <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Start Today</a></li>
+              <li><a href="#" class="start_today">Start Today</a></li>
             </ul>
           </div>
           <div class="tablet_nav">
@@ -44,7 +55,7 @@
               <ul>
                 <li><a href="#">Meet Stefan</a></li>
                 <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Start Today</a></li>
+                <li><a href="#" class="start_today">Start Today</a></li>
               </ul>
             </div><!--nav dropdown end -->
           </div><!--end tablet_nav-->
@@ -53,10 +64,10 @@
 
           <div class="showcase_grid">
             <div class="container video_1_box">
-              <video muted controls class="video1" id="video1" src="images/video1_crop.mp4" type="video/mp4"></video>
+              <video muted controls loop class="video1" id="video1" src="images/video1_crop.mp4" type="video/mp4"></video>
             </div> <!--end video_1-->
             <div class="container video_2_box">
-              <video muted controls class="video2" id="video2" src="images/video2_crop.mp4" type="video/mp4"></video>
+              <video muted controls loop class="video2" id="video2" src="images/video2_crop.mp4" type="video/mp4"></video>
             </div> <!--end video_2-->
           </div> <!--showcase end-->
 
@@ -76,7 +87,7 @@
             <div class="item item2">
               <div class="item_textbox_right">
                 <p>You choose where in San Diego and I come to you.</p>
-                <p>*Discounted rates for Pacific Beach</p>
+                <p><span class="light">*Discounted rates for Pacific Beach</span></p>
               </div>
             </div>
             <div class="item item3">
@@ -106,7 +117,9 @@
         <div class="row_testimonial">
           <div class="textbox_testimonial">
             <p>“His emphasis on correct technique and ability to adapt lessons to the needs of the student make training with him both rigorous and enlightening.”</p>
-            <a href="#">Read more testimonials</a>
+            <div class="textbox_testimonial_link">
+              <a href="#"><strong>Read more testimonials</strong></a>
+            </div>
           </div><!--end textbox-->
         </div><!--end row-->
       </div><!--end main_content container-->
@@ -116,7 +129,7 @@
       </div><!--end row-->
 
       <form>
-        <h1>Start Training Today</h1>
+        <h1 class="start_today_header">Start Training Today</h1>
           <label for='first_name'>First Name:</label>
           <input type="text" id="first_name" name="first_name">
 
@@ -131,7 +144,7 @@
 
           <label for="comment">Message</label>
           <textarea id="comment" name="user_comment"></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit" class="submit">Submit</button>
        </form>
 
        <footer>

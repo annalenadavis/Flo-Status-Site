@@ -7,6 +7,39 @@ body {
   background: $bgprimary;
 }
 
+.scroll_header {
+  background-color: $blue;
+  height: 50px;
+  width: 100vw;
+  color: white;
+  display: none;
+  z-index: 200;
+}
+
+.scroll_header p {
+  display: inline-block;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+.scroll_header_left {
+  text-align: left;
+  margin-left: 50px;
+  height: 100%;
+  display: inline-block;
+
+}
+
+.scroll_header_right {
+  text-align: right;
+  margin-right: 50px;
+  height: 100%;
+  display: inline-block;
+  float: right;
+  padding-right: 20px;
+}
+
+
 .header_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -108,7 +141,7 @@ body {
   position: absolute;
   top: 80px;
   right: 10px;
-  z-index: 100;
+  z-index: 500;
   box-shadow:1px 1px 4px $darkgray;
   border-radius: 3px;
   display: none;
@@ -119,6 +152,15 @@ body {
 .tablet_nav_dropdown ul {
   text-align: left;
   margin: 10px 0 10px 10px;
+}
+.tablet_nav_dropdown_background {
+  z-index: 499;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
 }
 .showcase_grid {
   display: grid;
@@ -333,6 +375,10 @@ body {
 
 .textbox_testimonial a {
   text-transform:uppercase;
+}
+
+.textbox_testimonial_link {
+  margin-top: 15px;
 }
 
 .row_banner {

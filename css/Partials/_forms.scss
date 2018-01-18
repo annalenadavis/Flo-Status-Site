@@ -69,6 +69,38 @@ button {
   margin-bottom: 10px;
 }
 
+button.start_today {
+  background-color: $blue;
+  font-size: 16px;
+  width: 180px;
+  height: 30px;
+  border: 1px solid white;
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+  @include tablet {
+    display: none;
+  }
+}
+
+input.newsletter_email {
+  display: inline-block;
+  width: 180px;
+  border: 1px solid white; 
+  border-radius: 5px;
+  height: 30px;
+}
+
+.submit_btn {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background-color: $blue;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
 fieldset {
   margin-bottom: 30px;
   border: none;
