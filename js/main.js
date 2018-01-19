@@ -38,18 +38,8 @@ function checkHeight() {
 }
 
 
-// function checkHeight(e) {
-//   console.log(showcase.height + header.height);
-//   if (ScrollY = 575px) {
-//     scrollHeader.animate
-//   }
-//   //when scrollY = showcase+header heights I want scrollHeader to appear
-// }
-
-
-
 //Toggle the nav dropdown menu on tablets/phones with menu button
-$("#menuBtn").click(function(){
+$("#menuBtn").click(function(event){
   event.preventDefault();
   $("#tabletNavDropdown").slideToggle();
   $(".tablet_nav_dropdown_background").slideToggle();

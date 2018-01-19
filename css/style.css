@@ -153,8 +153,11 @@ body {
 }
 
 .header_grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 75px 75px;
   grid-template-rows: 75px 75px;
 }
 
@@ -172,12 +175,16 @@ body {
 
 @media (min-width: 300px) and (max-width: 699px) {
   .header_grid {
+    -ms-grid-rows: 150px 50px;
+    -ms-grid-columns: 300px 1px;
     grid-template-rows: 100px 100px;
     grid-template-areas: "mainheader mainheader" "tabletnav tabletnav";
   }
 }
 
 .main_header {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
   grid-area: mainheader;
 }
 
@@ -209,6 +216,8 @@ body {
 }
 
 .contact {
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
   grid-area: contact;
   text-align: right;
   height: 100%;
@@ -225,6 +234,8 @@ body {
 }
 
 .nav {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
   grid-area: nav;
   text-align: right;
   line-height: 75px;
@@ -257,6 +268,8 @@ body {
 }
 
 .tablet_nav {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
   grid-area: tabletnav;
   text-align: right;
   align-self: end;
@@ -272,11 +285,9 @@ body {
   .tablet_nav {
     text-align: center;
     align-self: center;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
   }
-}
-
-.menu_bars {
-  position: relative;
 }
 
 .tablet_nav_dropdown {
@@ -290,6 +301,14 @@ body {
   box-shadow: 1px 1px 4px #808080;
   border-radius: 3px;
   display: none;
+  float: right;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .tablet_nav_dropdown {
+    top: 180px;
+    right: 30px;
+  }
 }
 
 .tablet_nav_dropdown li {
@@ -312,6 +331,7 @@ body {
 }
 
 .showcase_grid {
+  display: -ms-grid;
   display: grid;
   margin: auto;
   margin-top: 20px;
@@ -324,6 +344,7 @@ body {
 
 @media (min-width: 992px) {
   .showcase_grid {
+    -ms-grid-columns: 500px 500px;
     grid-template-columns: 500px 500px;
     width: 1010px;
   }
@@ -331,6 +352,7 @@ body {
 
 @media (min-width: 700px) and (max-width: 991px) {
   .showcase_grid {
+    -ms-grid-columns: 345px 345px;
     grid-template-columns: 345px 345px;
     width: 700px;
   }
@@ -338,17 +360,37 @@ body {
 
 @media (min-width: 300px) and (max-width: 699px) {
   .showcase_grid {
+    -ms-grid-rows: 300px 300px;
     grid-template-rows: 300px 300px;
     grid-template-areas: "video1" "video2";
+    text-align: center;
   }
 }
 
 .video_1_box {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
   grid-area: video1;
 }
 
+@media (min-width: 300px) and (max-width: 699px) {
+  .video_1_box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+
 .video_2_box {
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
   grid-area: video2;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .video_2_box {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
 }
 
 .video1 {
@@ -407,8 +449,11 @@ body {
 .main_grid {
   width: 50%;
   margin: auto;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 240px 240px;
   grid-template-columns: 240px 240px;
+  -ms-grid-rows: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   padding-bottom: 75px;
@@ -416,30 +461,74 @@ body {
 
 @media (min-width: 300px) and (max-width: 699px) {
   .main_grid {
+    -ms-grid-columns: 240px;
     grid-template-columns: 240px;
+    -ms-grid-rows: 240px 125px 240px 125px 240px 125px;
     grid-template-rows: auto;
     grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6";
   }
 }
 
+.item1 {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+}
+
+.item2 {
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+}
+
+.item3 {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+}
+
+.item4 {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+}
+
+.item5 {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+}
+
+.item6 {
+  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+}
+
 @media (min-width: 300px) and (max-width: 699px) {
   .item1 {
     grid-area: row-1;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
   }
   .item2 {
     grid-area: row-2;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
   }
   .item3 {
     grid-area: row-4;
+    -ms-grid-column: 1;
+    -ms-grid-row: 4;
   }
   .item4 {
     grid-area: row-3;
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
   }
   .item5 {
     grid-area: row-5;
+    -ms-grid-column: 1;
+    -ms-grid-row: 5;
   }
   .item6 {
     grid-area: row-6;
+    -ms-grid-column: 1;
+    -ms-grid-row: 6;
   }
 }
 
