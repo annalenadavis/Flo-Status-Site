@@ -80,12 +80,19 @@ button.start_today {
   margin-top: 10px;
 }
 
+form.validate {
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
 input.newsletter_email {
   display: inline-block;
   width: 180px;
   border: 1px solid white; 
   border-radius: 5px;
   height: 30px;
+  padding: 0;
 }
 
 .submit_btn {
@@ -96,6 +103,7 @@ input.newsletter_email {
   color: white;
   border: 1px solid white;
   border-radius: 5px;
+  display: inline-block;
 }
 
 fieldset {

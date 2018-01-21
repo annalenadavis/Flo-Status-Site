@@ -818,12 +818,19 @@ button.start_today {
   margin-top: 10px;
 }
 
+form.validate {
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
 input.newsletter_email {
   display: inline-block;
   width: 180px;
   border: 1px solid white;
   border-radius: 5px;
   height: 30px;
+  padding: 0;
 }
 
 .submit_btn {
@@ -834,6 +841,7 @@ input.newsletter_email {
   color: white;
   border: 1px solid white;
   border-radius: 5px;
+  display: inline-block;
 }
 
 fieldset {
@@ -880,4 +888,68 @@ label.light {
 }
 
 /* video button style */
+.bio_grid {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-auto-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas: "bio photo";
+  justify-content: center;
+  -ms-grid-columns: 4fr 3fr;
+  grid-template-columns: 4fr 3fr;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .bio_grid {
+    -ms-grid-rows: 400px 300px;
+    -ms-grid-columns: 250px 250px;
+    grid-template-rows: 400px 300px;
+    grid-template-columns: 250px 250px;
+    grid-template-areas: "bio" "photo";
+    text-align: center;
+  }
+}
+
+.bio {
+  grid-area: bio;
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .bio {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+  }
+}
+
+.bio h1 {
+  margin-left: 11vw;
+}
+
+.bio_container {
+  margin-left: 15vw;
+  margin-right: 5vw;
+}
+
+.bio_photo {
+  grid-area: photo;
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .bio_photo {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+  }
+}
+
+.bio_photo img {
+  margin: 40px;
+  max-width: 265px;
+}
 /*# sourceMappingURL=style.css.map */
