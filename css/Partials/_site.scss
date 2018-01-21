@@ -471,7 +471,7 @@ body {
 .row_testimonial {
   display: flex;
   justify-content: center;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .textbox_testimonial {
@@ -479,12 +479,13 @@ body {
   text-align: center;
 }
 
-.textbox_testimonial a {
-  text-transform:uppercase;
-}
+// .textbox_testimonial a {
+//   text-transform:uppercase;
+// }
 
 .textbox_testimonial_link {
   margin-top: 15px;
+  text-transform: uppercase;
 }
 
 .row_banner {
@@ -547,4 +548,12 @@ footer {
 }
 .footer_ul_contact li {
   margin-top: 20px;
+}
+
+
+.testimonials_container {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $bgaccent;
 }

@@ -1,9 +1,10 @@
 .bio_grid {
+    background-color: $bgaccent;
     display: -ms-grid;
     display: grid;
     margin: auto;
-    margin-top:20px;
-    margin-bottom: 20px;
+    padding-top:20px;
+    padding-bottom: 20px;
     grid-auto-rows: auto;
     grid-gap: 10px;
     grid-template-areas:
@@ -12,10 +13,10 @@
       -ms-grid-columns: 4fr 3fr;
       grid-template-columns: 4fr 3fr;
     @include phone {
-      -ms-grid-rows: 400px 300px;
-      -ms-grid-columns: 250px 250px;
-      grid-template-rows: 400px 300px;
-      grid-template-columns: 250px 250px;
+      -ms-grid-rows: 400px 250px;
+      -ms-grid-columns: 300px;
+      grid-template-rows: 400px 350px;
+      grid-template-columns: 300px;
       grid-template-areas:
       "bio"
       "photo";
@@ -38,6 +39,9 @@
   .bio_container {
       margin-left: 15vw;
       margin-right: 5vw;
+      @include phone {
+        margin-left: 5vw;
+      }
   }
   .bio_photo {
       grid-area: photo;
@@ -52,4 +56,7 @@
   .bio_photo img {
     margin: 40px;
     max-width: 265px;
+    @include phone {
+      margin: 0;
+    }
   }

@@ -640,7 +640,7 @@ body {
 .row_testimonial {
   display: flex;
   justify-content: center;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .textbox_testimonial {
@@ -648,12 +648,9 @@ body {
   text-align: center;
 }
 
-.textbox_testimonial a {
-  text-transform: uppercase;
-}
-
 .textbox_testimonial_link {
   margin-top: 15px;
+  text-transform: uppercase;
 }
 
 .row_banner {
@@ -735,6 +732,13 @@ footer {
 
 .footer_ul_contact li {
   margin-top: 20px;
+}
+
+.testimonials_container {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ebebeb;
 }
 
 *, *:before, *:after {
@@ -889,11 +893,12 @@ label.light {
 
 /* video button style */
 .bio_grid {
+  background-color: #ebebeb;
   display: -ms-grid;
   display: grid;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   grid-auto-rows: auto;
   grid-gap: 10px;
   grid-template-areas: "bio photo";
@@ -904,10 +909,10 @@ label.light {
 
 @media (min-width: 300px) and (max-width: 699px) {
   .bio_grid {
-    -ms-grid-rows: 400px 300px;
-    -ms-grid-columns: 250px 250px;
-    grid-template-rows: 400px 300px;
-    grid-template-columns: 250px 250px;
+    -ms-grid-rows: 400px 250px;
+    -ms-grid-columns: 300px;
+    grid-template-rows: 400px 350px;
+    grid-template-columns: 300px;
     grid-template-areas: "bio" "photo";
     text-align: center;
   }
@@ -935,6 +940,12 @@ label.light {
   margin-right: 5vw;
 }
 
+@media (min-width: 300px) and (max-width: 699px) {
+  .bio_container {
+    margin-left: 5vw;
+  }
+}
+
 .bio_photo {
   grid-area: photo;
   -ms-grid-column: 2;
@@ -951,5 +962,11 @@ label.light {
 .bio_photo img {
   margin: 40px;
   max-width: 265px;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .bio_photo img {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
