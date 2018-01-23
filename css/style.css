@@ -969,4 +969,42 @@ label.light {
     margin: 0;
   }
 }
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__train {
+  width: 2700px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.slider__train li {
+  width: 300px;
+  height: 500px;
+  background-color: pink;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.arrowBtn {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.arrowBtn__prev {
+  left: 0;
+}
+
+.arrowBtn__next {
+  right: 0;
+}
 /*# sourceMappingURL=style.css.map */
