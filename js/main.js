@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+
+//STICKY HEADER CODE BELOW
+
+//only run on main page
+// const hasMainContent = element.classList.contains('mainContent');
+// if(hasMainContent === true) {
+// console.log("it's here!");
+// }
+
 //debounce for Scroll-header reveal so doesn't check too often
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
