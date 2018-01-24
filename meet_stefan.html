@@ -15,6 +15,33 @@
         <div class="tablet_nav_dropdown_background"></div>
         <header>
 
+            <div class="scroll_header" id="scrollHeader">
+                <div class="scroll_header_left">
+                    <button type="button" class="start_today">Start Training Today</button>
+                 </div> <!--end header left-->
+                 <div class="scroll_header_right">               
+                   
+                   <!-- Begin MailChimp Signup Form -->
+                   <!-- <div id="mc_embed_signup"> -->
+                     <form action="https://directconnectionstraining.us16.list-manage.com/subscribe/post?u=0e68aa7948aa523b3192896d3&amp;id=10de667a09" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <!-- <div id="mc_embed_signup_scroll"> -->
+                        <!-- <label for="mce-EMAIL">Subscribe to our mailing list</label> -->
+                        <p>Subscribe to my email list:</p>
+                                  <input type="email" value="" name="EMAIL" class="email newsletter_email" id="mce-EMAIL" placeholder="email address" id="newsletter_email" required>
+                                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                  <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"> -->
+                                    <!-- <input type="text" name="b_0e68aa7948aa523b3192896d3_10de667a09" tabindex="-1" value=""> -->
+                                  <!-- </div> -->
+                                  <!-- <div class="clear"> -->
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button submit_btn">
+                                  <!-- </div> -->
+                                <!-- </div> -->
+                              </form>
+                        <!-- </div> -->
+                      <!--End mc_embed_signup-->
+                    </div><!--end header right-->
+                  </div><!--end scroll_header-->
+
           <div class="header_grid">
               <a href="flowsandiego.com">
             <div class="main_header">
@@ -33,7 +60,7 @@
               </div>
             <div class="nav">
               <ul>
-                <li><a href="http://www.flowsandiego.com/meet-stefan">Meet Stefan</a></li>
+                <li><a href="http://www.flowsandiego.com/meet_stefan">Meet Stefan</a></li>
                 <li><a href="http://www.flowsandiego.com/testimonials">Testimonials</a></li>
                 <li><a href="#" class="start_today">Start Today</a></li>
               </ul>
@@ -48,7 +75,7 @@
         </header>
                     <div class="tablet_nav_dropdown" id="tabletNavDropdown">
                       <ul>
-                        <li><a href="http://www.flowsandiego.com/meet-stefan">Meet Stefan</a></li>
+                        <li><a href="http://www.flowsandiego.com/meet_stefan">Meet Stefan</a></li>
                         <li><a href="http://www.flowsandiego.com/testimonials">Testimonials</a></li>
                         <li><a href="#" class="start_today">Start Today</a></li>
                       </ul>
@@ -75,7 +102,18 @@
 
             </div>        
 
-              
+            <!-- <div class="slideshow" id="mainContent">
+              <ul class="slideshow_slides">
+                  <li style="background-image:url('images/stefan_1.jpg')"></li>
+                  <li style="background-image:url('images/stefan_1.jpg')"></li>
+                  <li style="background-image:url('images/stefan_1.jpg')"></li>
+              </ul>
+              <ul class="slideshow_controls">
+                  <li class="active">Special Offers</li>
+                  <li>2018 Forester</li>
+                  <li>Awards</li>
+              </ul>
+           </div> -->
 
                     <div class="row row_banner">
 
@@ -128,6 +166,46 @@
               
                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                        <script src="js/main.js"></script>
+<!-- <script>
+  //Slideshow on Meet Stefan page
+
+var slideshowCount = 0;
+
+$(".slideshow_slides li:eq(0)").show();
+$(".slideshow_controls li:eq(0)").addClass("active");
+    
+    function slideshowIntervalCount(){
+            if (slideshowCount >= 2){
+                slideshowCount = 0;
+            } else { 
+                slideshowCount++;
+            }
+        changeSlide(slideshowCount);
+    } 
+    
+    function changeSlide(slideNum){
+        console.log("changing slides");
+            //reset- turn all off
+        $(".slideshow_slides li").hide();
+        $(".slideshow_controls li").removeClass("active");
+            //show the correct one
+        $(".slideshow_slides li:eq("+slideNum+")").show();
+         $(".slideshow_controls li:eq("+slideNum+")").addClass("active");
+    } //changeSlide function end
+    
+    $(".slideshow_controls li").click(function( ){
+        console.log ("dot dot dot!")
+        const dotIndex = $(this).index();
+        slideshowCount = dotIndex;
+        //console.log(dotIndex);
+        changeSlide(dotIndex);
+        clearInterval(interval);
+    }); //click method end
+    
+     const interval = setInterval(slideshowIntervalCount, 5000);
+</script> -->
+
+
                   </body>
               
               </html>

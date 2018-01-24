@@ -91,6 +91,43 @@ video2.controls = false;
 }
 
 
+// //Slideshow on Meet Stefan page
+
+// var slideshowCount = 0;
+
+// $(".slideshow_slides li:eq(0)").show();
+// $(".slideshow_controls li:eq(0)").addClass("active");
+    
+//     function slideshowIntervalCount(){
+//             if (slideshowCount >= 2){
+//                 slideshowCount = 0;
+//             } else { 
+//                 slideshowCount++;
+//             }
+//         changeSlide(slideshowCount);
+//     } 
+    
+//     function changeSlide(slideNum){
+//         console.log("changing slides");
+//             //reset- turn all off
+//         $(".slideshow_slides li").hide();
+//         $(".slideshow_controls li").removeClass("active");
+//             //show the correct one
+//         $(".slideshow_slides li:eq("+slideNum+")").show();
+//          $(".slideshow_controls li:eq("+slideNum+")").addClass("active");
+//     } //changeSlide function end
+    
+//     $(".slideshow_controls li").click(function( ){
+//         console.log ("dot dot dot!")
+//         const dotIndex = $(this).index();
+//         slideshowCount = dotIndex;
+//         //console.log(dotIndex);
+//         changeSlide(dotIndex);
+//         clearInterval(interval);
+//     }); //click method end
+    
+//      const interval = setInterval(slideshowIntervalCount, 5000); 
+
 
 
 //Video sound or mute player_controls

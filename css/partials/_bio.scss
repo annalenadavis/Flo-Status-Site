@@ -61,3 +61,51 @@
     }
   }
 
+  .slideshow {
+    margin: 80px auto;
+    position: relative;
+    width: 520px;
+    height: 347px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  // .slideshow > li {
+  //   position: absolute;
+  //   top: 10px;
+  //   left: 10px;
+  //   right: 10px;
+  //   bottom: 10px;
+  // }
+
+  .slideshow_slides li {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    display: none;
+    text-align: center;
+}
+
+.slideshow_controls {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 120px;
+  text-align: center;
+}
+.slideshow_controls li {
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  font-family: Arial;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px rgba(0,0,0,.35);
+}
+.slideshow_controls li.active {
+  opacity: 1;
+}
