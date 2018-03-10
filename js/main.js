@@ -31,42 +31,46 @@ $(".start_today").click(function(event){
 }); //click method end
 
 
-// //Slideshow on Meet Stefan page
+//Slideshow on Meet Stefan page
+//Automatic to Manual slideshow
 
-// var slideshowCount = 0;
+var main = function() {
 
-// $(".slideshow_slides li:eq(0)").show();
-// $(".slideshow_controls li:eq(0)").addClass("active");
-    
-//     function slideshowIntervalCount(){
-//             if (slideshowCount >= 2){
-//                 slideshowCount = 0;
-//             } else { 
-//                 slideshowCount++;
-//             }
-//         changeSlide(slideshowCount);
-//     } 
-    
-//     function changeSlide(slideNum){
-//         console.log("changing slides");
-//             //reset- turn all off
-//         $(".slideshow_slides li").hide();
-//         $(".slideshow_controls li").removeClass("active");
-//             //show the correct one
-//         $(".slideshow_slides li:eq("+slideNum+")").show();
-//          $(".slideshow_controls li:eq("+slideNum+")").addClass("active");
-//     } //changeSlide function end
-    
-//     $(".slideshow_controls li").click(function( ){
-//         console.log ("dot dot dot!")
-//         const dotIndex = $(this).index();
-//         slideshowCount = dotIndex;
-//         //console.log(dotIndex);
-//         changeSlide(dotIndex);
-//         clearInterval(interval);
-//     }); //click method end
-    
-//      const interval = setInterval(slideshowIntervalCount, 5000); 
+	var paused = false
+
+	$('.arrowR').click(function() {
+		paused = true;
+		$('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	});
+		
+	$('.arrowL').click(function() {
+		paused = true;
+		$('#slideshow > div:last')
+		.fadeIn(1000)
+		.prependTo('#slideshow')
+		.next()
+		.fadeOut(1000)
+		.end();
+	});
+	
+	setInterval(function() {
+		if (paused === false) { 
+			$('#slideshow > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow');
+		};
+	},  5000);
+};
+
+$(document).ready(main);
 
 
 

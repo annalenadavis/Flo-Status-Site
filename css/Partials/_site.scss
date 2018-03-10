@@ -557,3 +557,83 @@ footer {
   padding-bottom: 40px;
   background-color: $bgaccent;
 }
+
+
+//for slideshow
+
+.hidden {
+  display: none;
+}
+
+.slideshow_container {
+  margin: 0;
+  max-width: 750px;
+  margin:10vh auto 10vh auto;
+  text-align: center;
+}
+
+.slideshow_container > div {
+  display: inline-block;
+}
+
+#slideshow {
+  margin: auto;
+  position: relative;
+  @include tablet {
+    width: 520px;
+    height: 167px;
+  }
+  @include phone {
+    width: 75vw;
+    max-width: 300px;
+    margin: auto;
+    height: 180px;
+  }
+	width: 620px;
+  height: 200px;
+}
+
+#slideshow > div {
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0; 
+}
+
+#slideshow img {
+	width: 100%;
+  margin: auto;
+  border: solid 1px $darkgray;
+}
+
+.arrow {
+  width: 40px;
+  font-size: 64px;
+  display: inline-block;
+  color: $darkgray;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 400px;
+  font-weight: bold;
+  padding: 0 10px;
+  @include phone {
+    font-size: 32px;
+    line-height: 200px;
+  }
+}
+
+.arrowL {
+  @include phone{
+  position: absolute;
+  left: 0;
+  }
+}
+
+.arrowR {
+  @include phone {
+    position: absolute;
+    right: 0;
+  }
+}
