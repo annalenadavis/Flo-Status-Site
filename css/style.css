@@ -334,6 +334,8 @@ body {
   display: -ms-grid;
   display: grid;
   margin: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   margin-top: 20px;
   margin-bottom: 20px;
   grid-auto-rows: auto;
@@ -456,7 +458,6 @@ body {
   -ms-grid-rows: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
-  padding-bottom: 75px;
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -797,7 +798,7 @@ footer {
   width: 40px;
   font-size: 64px;
   display: inline-block;
-  color: #808080;
+  color: #2b98f0;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;

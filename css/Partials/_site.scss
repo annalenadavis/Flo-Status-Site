@@ -201,6 +201,8 @@ body {
   display: -ms-grid;
   display: grid;
   margin: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   margin-top:20px;
   margin-bottom: 20px;
   grid-auto-rows: auto;
@@ -298,7 +300,6 @@ body {
   -ms-grid-rows: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
-  padding-bottom: 75px;
   @include phone {
     -ms-grid-columns: 240px;
     grid-template-columns: 240px;
@@ -611,7 +612,7 @@ footer {
   width: 40px;
   font-size: 64px;
   display: inline-block;
-  color: $darkgray;
+  color: $blue;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
