@@ -1,24 +1,89 @@
 
 
+/* mute button style */
+.muteBtn1 {
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	overflow: hidden;
+    display: block;
+    bottom: 12px;
+    left: 12px;
+    opacity: .5;
+    z-index: 99;
 
-// .player_controls {
-//   display:flex;
-//   position: absolute;
-//   bottom:0;
-//   transform: translateY(100%) translateY(-5px);
-//   transition:all .3s;
-//   flex-wrap:wrap;
-//   background:rgba(0,0,0,0.1);
-// }
+	span {
+		display: block;
+		width: 8px;
+		height: 8px;
+		background: $blue;
+		margin: 11px 0 0 2px;
 
-// .video_2_box i {
-//   color: $lightgray;
-//   position: absolute;
-//   bottom: 0;
-// }
-//
-// .fa-volume-off {
-//   display: hidden;
-// }
+		&:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-color: transparent $blue transparent transparent;
+			border-width: 10px 14px 10px 15px;
+			left: -13px;
+			top: 5px;
+		}
 
-/* video button style */
+		&:before {
+			transform: rotate(45deg);
+			border-radius: 0 50px 0 0;
+			content: '';
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			border-style: double;
+			border-color: $blue;
+			border-width: 7px 7px 0 0;
+			left: 18px;
+			top: 9px;
+			transition: all 0.2s ease-out;
+		}
+	}
+
+	&:hover {
+
+		span:before {
+			transform: scale(.8) translate(-3px, 0) rotate(42deg);		
+    }
+	}
+  
+  &.mute {
+    span:before {
+			transform: scale(.5) translate(-15px, 0) rotate(36deg);
+      opacity: 0;
+    }
+  }
+}
+
+// play button style--only phones and tablet
+@media (max-width: #{$desktop__width - 1px}) {
+    .playBtn {
+        background: none;
+        border: 0;
+        color: $blue;
+        outline: 0;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+        max-width: 80px;
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        font-size: 80px;
+        opacity: .5;
+        margin-left: -10%;
+        margin-bottom: -10%;
+    }
+}
+@include desktop {
+    .playBtn {
+        display:none;
+    }
+}

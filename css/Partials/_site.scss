@@ -233,7 +233,8 @@ body {
 .video_1_box {
   -ms-grid-column: 1;
   -ms-grid-row:1;
-    grid-area: video1;
+  grid-area: video1;
+  position: relative;
     @include phone {
       -ms-grid-row: 1;
       -ms-grid-column: 1;
@@ -242,7 +243,8 @@ body {
 .video_2_box {
   -ms-grid-column: 2;
   -ms-grid-row:1;
-    grid-area: video2;
+  grid-area: video2;
+  position: relative;
     @include phone {
       -ms-grid-row: 2;
       -ms-grid-column: 1;
@@ -252,6 +254,7 @@ body {
 .video1 {
   width: 500px;
   height: 500px;
+  z-index: 1;
   @include tablet {
     width: 345px;
     height: 345px;

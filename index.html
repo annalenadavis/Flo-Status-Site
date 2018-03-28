@@ -125,10 +125,19 @@
 
           <div class="showcase_grid" id="mainContent">
             <div class="container video_1_box">
-              <video muted controls loop poster="images/video5_poster.png" class="video1" id="video1" src="images/video5-b.mp4" type="video/mp4"></video>
+              <button class="playBtn" id="playBtn1" title="Toggle Play">►</button>
+              <video muted loop poster="images/video5_poster.png" class="video1 video" id="video1" src="images/video5-b.mp4" type="video/mp4"></video>
+              <a href="#!" class="muteBtn1 muteBtn" id="muteBtn1">
+                <span></span>
+              </a>
             </div> <!--end video_1-->
+
             <div class="container video_2_box">
-              <video muted controls loop poster="images/video2_poster.png"class="video2" id="video2" src="images/video2_crop.mp4" type="video/mp4"></video>
+              <button class="playBtn" id="playBtn2" title="Toggle Play">►</button>
+              <video muted loop poster="images/video2_poster.png" class="video2 video" id="video2" src="images/video2_crop.mp4" type="video/mp4"></video>
+              <a href="#!" class="muteBtn1 muteBtn" id="muteBtn2">
+                <span></span>
+              </a>
             </div> <!--end video_2-->
           </div> <!--showcase end-->
 
@@ -196,8 +205,8 @@
 
 
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/header.js"></script>
+        <script src="js/global.js"></script>
+        <script src="js/home.js"></script>
     </body>
 
 </html>

@@ -373,6 +373,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-row: 1;
   grid-area: video1;
+  position: relative;
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -386,6 +387,7 @@ body {
   -ms-grid-column: 2;
   -ms-grid-row: 1;
   grid-area: video2;
+  position: relative;
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -398,6 +400,7 @@ body {
 .video1 {
   width: 500px;
   height: 500px;
+  z-index: 1;
 }
 
 @media (min-width: 700px) and (max-width: 991px) {
@@ -978,7 +981,89 @@ label.light {
   }
 }
 
-/* video button style */
+/* mute button style */
+.muteBtn1 {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  overflow: hidden;
+  display: block;
+  bottom: 12px;
+  left: 12px;
+  opacity: .5;
+  z-index: 99;
+}
+
+.muteBtn1 span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #2b98f0;
+  margin: 11px 0 0 2px;
+}
+
+.muteBtn1 span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #2b98f0 transparent transparent;
+  border-width: 10px 14px 10px 15px;
+  left: -13px;
+  top: 5px;
+}
+
+.muteBtn1 span:before {
+  transform: rotate(45deg);
+  border-radius: 0 50px 0 0;
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-style: double;
+  border-color: #2b98f0;
+  border-width: 7px 7px 0 0;
+  left: 18px;
+  top: 9px;
+  transition: all 0.2s ease-out;
+}
+
+.muteBtn1:hover span:before {
+  transform: scale(0.8) translate(-3px, 0) rotate(42deg);
+}
+
+.muteBtn1.mute span:before {
+  transform: scale(0.5) translate(-15px, 0) rotate(36deg);
+  opacity: 0;
+}
+
+@media (max-width: 991px) {
+  .playBtn {
+    background: none;
+    border: 0;
+    color: #2b98f0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    max-width: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    font-size: 80px;
+    opacity: .5;
+    margin-left: -10%;
+    margin-bottom: -10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .playBtn {
+    display: none;
+  }
+}
+
 .bio_grid {
   background-color: #ebebeb;
   display: -ms-grid;
