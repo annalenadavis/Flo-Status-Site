@@ -1,4 +1,6 @@
-
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
 
 //**STICKY HEADER SCRIPTS**//
 
@@ -52,24 +54,29 @@ function pauseVideo(){
   this.pause();
 };
 
+
 function togglePlay() {
   if (this.paused === true) {
+    event.preventDefault;
     this.play();
     this.previousElementSibling.style.display='none';
   } else {
     this.pause();
-}}
+  }}
+  
+  //Mute and Unmute Videos
+  videos.muted === true;
+  
+  function toggleMute(){
+    if (this.previousElementSibling.muted === true){
+      this.previousElementSibling.muted = false;
+    } else this.previousElementSibling.muted = true; 
+  };
+  
 
-//Mute and Unmute Videos
-videos.muted === true;
-
-function toggleMute(){
- if (this.previousElementSibling.muted === true){
-   this.previousElementSibling.muted = false;
- } else this.previousElementSibling.muted = true; 
-};
-
+  if (window.screen.width >= 992) { //play on hover only on larger screens
 videos.forEach(video => video.addEventListener('mouseover', playVideo));
 videos.forEach(video => video.addEventListener('mouseout', pauseVideo));
+  }
 videos.forEach(video => video.addEventListener('click', togglePlay));
 muteBtns.forEach(muteBtn => muteBtn.addEventListener('click', toggleMute));

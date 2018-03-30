@@ -1047,7 +1047,7 @@ label.light {
     padding: 0;
     cursor: pointer;
     display: block;
-    max-width: 80px;
+    max-width: 50px;
     position: absolute;
     left: 50%;
     bottom: 50%;
