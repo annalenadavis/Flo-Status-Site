@@ -11,3 +11,5 @@ Bright and modern design
 HTML5, CSS3, SASS
 CSS-Grid and Flexbox
 JavaScript and jQuery
+
+![alt tag](https://github.com/annalenadavis/bootstrap-portfolio/blob/master/img/flow/finaldesign.jpg "Site Design")
