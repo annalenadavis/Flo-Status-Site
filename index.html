@@ -19,7 +19,7 @@
     <body>
       <div class="tablet_nav_dropdown_background"></div>
       <header>
-        <div class="scroll_header" id="scrollHeader">
+        <div class="scroll_header" id="scrollHeader" role="form">
           <div class="scroll_header_left">
               <button type="button" class="start_today">Start Training Today</button>
            </div> <!--end header left-->
@@ -56,26 +56,27 @@
             <ul>
                 <li><a href="tel:18586333692">(858) 633-3692</a></li>
                 <li><a href="mailto:stefan@flowsandiego.com">stefan@flowsandiego.com</a><li>
-                <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" aria-hidden="true"></i></a></li>
-                <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i title="Yelp reviews" class="fa fa-yelp"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square"title="facebook page"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" title="instagram page"></i></a></li>
               </ul>
             </div>
-          <div class="nav">
+          <nav class="nav">
             <ul>
               <li><a href="http://www.flowsandiego.com/meet_stefan">Meet Stefan</a></li>
               <li><a href="http://www.flowsandiego.com/testimonials">Testimonials</a></li>
               <li><a href="#" class="start_today">Start Today</a></li>
             </ul>
-          </div>
-          <div class="tablet_nav">
-            <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" aria-hidden="true"></i></a></li>
-            <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li class="menu_bars"><a href="#"><i class="fa fa-bars" id="menuBtn" aria-hidden="true"></i></a></li>
-          </div><!--end tablet_nav-->
+          </nav>
+          <nav class="tablet_nav">
+            <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" title="yelp reviews"></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" title="facebook page"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" title="instagram page"></i></a></li>
+            <li class="menu_bars"><a href="#"><i class="fa fa-bars" id="menuBtn" title="menu button"></i></a></li>
+          </nav><!--end tablet_nav-->
         </div> <!-- end div grid -->
       </header>
+      <!-- TODO: make hamburger menu clickable when tabbing through -->
                   <div class="tablet_nav_dropdown" id="tabletNavDropdown">
                     <ul>
                       <li><a href="http://www.flowsandiego.com/meet_stefan">Meet Stefan</a></li>
@@ -84,7 +85,7 @@
                     </ul>
                   </div><!--nav dropdown end -->
 
-          <div class="container main_content">
+          <main class="container main_content">
             <div class="row main_row">
               <h1>Muay Thai Personal Training<h1>
               <h2>Crafted to you Personally</h2>
@@ -92,7 +93,7 @@
   
           <div class="container main_grid">
               <div class="item item1">
-                <div class="image_1">
+                <div class="image_1" aria-label="muay thai training on a beach" role="img">
                 </div> <!-- end image_1 -->
                 <div class="image_marker image_marker_left"></div>
               </div>
@@ -110,12 +111,12 @@
                 </div>
               </div>
               <div class="item item4">
-                <div class="image_2">
+                <div class="image_2" aria-label="self-defense training in garage" role="img">
                 </div> <!-- end image_2 -->
                 <div class="image_marker image_marker_right"></div>
               </div>
               <div class="item item5">
-                  <div class="image_3">
+                  <div class="image_3" aria-label="martial arts training gear" role="img">
                   </div> <!-- end image_3 -->
                 <div class="image_marker image_marker_left"></div>
               </div>
@@ -129,16 +130,16 @@
           <div class="showcase_grid" id="mainContent">
             <div class="container video_1_box">
               <button class="playBtn" id="playBtn1" title="Toggle Play">►</button>
-              <video muted loop preload="none" poster="images/video5_poster.png" class="video1 video" id="video1" src="images/video5-b.mp4" type="video/mp4"></video>
-              <a href="#!" class="muteBtn1 muteBtn" id="muteBtn1">
+              <video muted loop preload="none" poster="images/video5_poster.png" class="video1 video" id="video1" src="images/video5-b.mp4" type="video/mp4" aria-label="Stefan and client muay thai training"></video>
+              <a href="#!" class="muteBtn1 muteBtn" id="muteBtn1" role="button" aria-label="mute button" tabindex="-1">
                 <span></span>
               </a>
             </div> <!--end video_1-->
 
             <div class="container video_2_box">
               <button class="playBtn" id="playBtn2" title="Toggle Play">►</button>
-              <video muted loop preload="none" poster="images/video2_poster.png" class="video2 video" id="video2" src="images/video2_crop.mp4" type="video/mp4"></video>
-              <a href="#!" class="muteBtn1 muteBtn" id="muteBtn2">
+              <video muted loop preload="none" poster="images/video2_poster.png" class="video2 video" id="video2" src="images/video2_crop.mp4" type="video/mp4" aria-label="Stefan and client doing self-defense training"></video>
+              <a href="#!" class="muteBtn1 muteBtn" id="muteBtn2" role="button" aria-label="mute button" tabindex="-1">
                 <span></span>
               </a>
             </div> <!--end video_2-->
@@ -156,13 +157,13 @@
             </div>
           </div><!--end textbox-->
         </div><!--end row-->
-      </div><!--end main_content container-->
+      </main><!--end main_content container-->
 
       
       <div class="row row_banner">
       </div><!--end row-->
 
-      <form name="contact" data-netlify="true">
+      <form name="contact" data-netlify="true" aria-label="contact form" tabindex="0">
         <h1 class="start_today_header" >Start Training Today</h1>
           <label for='first_name'>First Name:</label>
           <input type="text" id="first_name" name="first_name">
@@ -174,7 +175,7 @@
           <input type="email" id="email" name="user_email">
 
           <label for='phone'>Phone:</label>
-          <input type="number" id="number" name="user_number">
+          <input type="number" id="number" name="user_number" aria-label="phone">
 
           <label for="comment">Message</label>
           <textarea id="comment" name="user_comment"></textarea>
@@ -187,16 +188,16 @@
              <a href="http://www.flowsandiego.com/"><img src="images/flow_logo_tagline.png" alt="Flow fitness in striking logo" class="logo_img_small"></a>
                <li><p>(858) 633-3692</p></li>
                <li><a href="mailto:stefan@flowsandiego.com">stefan@flowsandiego.com</a><li>
-               <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" aria-hidden="true"></i></a></li>
-               <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-               <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+               <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" title="Yelp reviews"></i></a></li>
+               <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" title="facebook page"></i></a></li>
+               <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" title="instagram page"></i></a></li>
              </ul>
            </div>
            <div class="small_footer">
              <ul class="footer_ul_icons">
-                 <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" aria-hidden="true"></i></a></li>
-                 <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                 <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                 <li><a target="_blank" href="https://www.yelp.com/biz/direct-connections-personal-martial-arts-training-san-diego-3?osq=personal+martial+arts"><i class="fa fa-yelp" title="Yelp reviews"></i></a></li>
+                 <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" title="facebook page"></i></a></li>
+                 <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" title="facebook page"></i></a></li>
                </ul>
                <ul class="footer_ul_contact">
                  <li><a href="tel:18586333692">(858) 633-3692</a></li>
