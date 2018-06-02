@@ -10,16 +10,11 @@ $black: 900; //Maven Pro
 h1 {
   font-family: $font-accent;
   font-weight: $black;
-  color: $blue;
+  color: $lightblue;
   margin: 10px;
-  @include desktop {
-    font-size: 32px;
-  }
-  @include tablet {
-    font-size: 30px;
-  }
-  @include phone {
-    font-size: 26px;
+  font-size: 4.5rem;
+    @include phone {
+    font-size: 3.2rem;
   }
 }
 
@@ -28,31 +23,26 @@ h2 {
   font-weight: $regular;
   color: $black;
   margin: 10px;
-  @include desktop {
-    font-size: 26px;
-  }
-  @include tablet {
-    font-size: 26px;
-  }
+  font-size: 3rem;
   @include phone {
-    font-size: 20px;
+    font-size: 2.5rem;
   }
 }
 
 h3 {
   font-family: $font-primary;
   font-weight: $regular;
-  font-size: 22px;
+  font-size: 2.3rem;
   color: $lightgray;
   @include phone {
-    font-size: 18px;
+    font-size: 2rem;
   }
 }
 
 p {
   font-family: $font-primary;
   font-weight: $regular;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   @include phone {
     font-size: 1.8rem;
   }
@@ -60,23 +50,23 @@ p {
 
 .contact p {
   color: $darkgray;
-  font-size: 16px;
+  font-size: 2rem;
 }
 
 a {
   font-family: $font-primary;
   font-weight: $regular;
   color: $blue;
-  font-size: 16px;
+  font-size: 2rem;
   text-decoration: none;
 }
 
 .fa {
   color: $yellow;
-  font-size: 26px;
+  font-size: 2.8rem;
 }
 
 .light {
   color: $darkgray;
-  font-size: 14px;
+  font-size: 1.8rem;
 }

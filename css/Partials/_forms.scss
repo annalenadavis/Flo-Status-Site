@@ -15,6 +15,7 @@ form {
 form h1 {
   margin: 0 0 30px 0;
   text-align: left;
+  font-size: 4rem;
 }
 
 input[type="text"],
@@ -38,7 +39,7 @@ select {
   padding: 10px;
   width: 100%;
   background-color: $bgaccent;
-  color: #8a97a0;
+  color:$black;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 20px;
 }
@@ -70,7 +71,7 @@ button {
 }
 
 button.start_today {
-  background-color: $blue;
+  background-color: $lightblue;
   font-size: 16px;
   width: 180px;
   height: 30px;
@@ -99,7 +100,7 @@ input.newsletter_email {
   width: 100px;
   height: 30px;
   font-size: 16px;
-  background-color: $blue;
+  background-color: $lightblue;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
@@ -120,7 +121,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-family: $font-primary;
-  font-size: 16px;
+  font-size: 2rem;
   color: $darkgray;
 }
 

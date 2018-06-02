@@ -1,7 +1,10 @@
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
-
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
   font-family: $font-primary;
   font-weight: $regular;
@@ -9,22 +12,20 @@ body {
   color: $black;
   background: $bgprimary;
 }
-
+/* ====================== Scroll Header ====================== */
 .scroll_header {
-  background-color: $blue;
+  background-color: $lightblue;
   height: 50px;
   width: 100vw;
   color: white;
   z-index: 200;
   display: none;
 }
-
 .scroll_header p {
   display: inline-block;
   line-height: 50px;
   font-size: 16px;
 }
-
 .scroll_header_left {
   text-align: left;
   margin-left: 50px;
@@ -34,7 +35,6 @@ body {
     display: none;
   }
 }
-
 .scroll_header_right {
   text-align: right;
   margin-right: 50px;
@@ -46,25 +46,23 @@ body {
     display: none;
   }
 }
-
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   display: inline;
 }
-
 .sticky + .content {
   padding-top: 102px;
 }
-
+/* ====================== Header Banner ====================== */
 .header_grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 75px 75px;
-  grid-template-rows: 75px 75px;
+  -ms-grid-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;
+  -ms-grid-rows: 75px 100px;
+  grid-template-rows: 75px 100px;
   @include desktop {
   grid-template-areas:
     "mainheader contact"
@@ -148,6 +146,7 @@ body {
     display: none;
   }
 }
+/* ====================== Dropdown Nav ====================== */
 .tablet_nav {
   -ms-grid-column: 1;
   -ms-grid-row: 1;
@@ -164,9 +163,6 @@ body {
     -ms-grid-row: 2;
   }
 }
-// .menu_bars {
-//   position: relative;
-// }
 .tablet_nav_dropdown {
   width: 150px;
   height: auto;
@@ -200,117 +196,42 @@ body {
   left: 0;
   display: none;
 }
-.showcase_grid {
-  display: -ms-grid;
-  display: grid;
+/* ====================== Main Content ====================== */
+.main_content {
+  background-color: $bgaccent;
+  width: 100%;
+  box-sizing: border-box;
+}
+.content {
+  width: 100vmin;
   margin: auto;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  margin-top:20px;
-  margin-bottom: 20px;
-  grid-auto-rows: auto;
-  grid-gap: 10px;
-  grid-template-areas:
-    "video1 video2";
-    justify-content: center;
-  @include desktop {
-    -ms-grid-columns: 500px 500px;
-    grid-template-columns: 500px 500px;
-    width: 1010px;
-  }
-  @include tablet {
-    -ms-grid-columns: 345px 345px;
-    grid-template-columns: 345px 345px;
-    width: 700px;
-  }
   @include phone {
-    -ms-grid-rows: 300px 300px;
-    grid-template-rows: 300px 300px;
-    grid-template-areas:
-    "video1"
-    "video2";
-    text-align: center;
+    width: 90vw;
   }
 }
-
-.video_1_box {
-  -ms-grid-column: 1;
-  -ms-grid-row:1;
-  grid-area: video1;
-  position: relative;
-    @include phone {
-      -ms-grid-row: 1;
-      -ms-grid-column: 1;
-    }    
-  }
-.video_2_box {
-  -ms-grid-column: 2;
-  -ms-grid-row:1;
-  grid-area: video2;
-  position: relative;
-    @include phone {
-      -ms-grid-row: 2;
-      -ms-grid-column: 1;
-    }
-  }
-
-.video1 {
-  width: 500px;
-  height: 500px;
-  z-index: 1;
-  @include tablet {
-    width: 345px;
-    height: 345px;
-  }
-  @include phone {
-    width: 300px;
-    height: 300px;
-  }
+.main_row {
+  width: 75vw;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
-.video2 {
-    width: 500px;
-    height: 500px;
-    @include tablet {
-      width: 345px;
-      height: 345px;
-    }
-    @include phone {
-      width: 300px;
-      height: 300px;
-    }
-  }
-
-  .main_content {
-    background-color: $bgaccent;
-  }
-
-  .main_row {
-    width: 75vw;
-    margin: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .main_row h2 {
-    padding-left: 25px;
-  }
-
+.main_row h2 {
+  padding-left: 25px;
+}
 .main_grid {
   width: 50%;
   margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 240px;
-  grid-template-columns: 240px 240px;
+  grid-template-columns: repeat(2, 40vmin);
   -ms-grid-rows: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 40vmin);
   justify-content: center;
+  align-items: center;
   @include phone {
-    -ms-grid-columns: 240px;
-    grid-template-columns: 240px;
-    -ms-grid-rows: 240px 125px 240px 125px 240px 125px;
-    grid-template-rows: auto;
+    grid-template-columns: 60vmin;
+    grid-template-rows: min-content;
     grid-template-areas:
     "row-1"
     "row-2"
@@ -320,8 +241,7 @@ body {
     "row-6"
   }
 }
-
-//So grid will work with IE and Edge...
+//Order of items for IE
 .item1 {   
   -ms-grid-column: 1;
   -ms-grid-row:1;
@@ -346,7 +266,6 @@ body {
   -ms-grid-column: 2;
   -ms-grid-row:3;
 }
-
 @media(min-width: #{$phone__width}) and (max-width: #{$tablet__width - 1px}){
   .item1 { 
     grid-area: row-1;
@@ -379,61 +298,59 @@ body {
     -ms-grid-row:6;
   }
 }
-
 .image_1 {
-  height: 240px;
-  width: 240px;
+  height: 40vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/beach_training2.jpg");
+              url("../images/beach_training.jpg");
+  @include phone {
+    height: 60vmin;
+  }
 }
 .image_2 {
-  height: 240px;
-  width: 240px;
+  height: 40vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/garage_training2.jpg");
+              url("../images/garage_training.jpg");
+  @include phone {
+    height: 60vmin;
+  }
 }
 .image_3 {
-  height: 240px;
-  width: 240px;
+  height: 40vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/gloves2.jpg");
+              url("../images/gloves.jpg");
+  @include phone {
+    height: 60vmin;
+  }
 }
-
 .image_marker {
-    height: 120px;
+    height: 25vmin;
     background-color: $yellow;
-    width: 16px;
+    width: 2vmin;
     top: 50%;
-    margin-top: -50px;
+    margin-top: -13vmin;
     z-index: 100;
 }
-
 .image_marker_left {
-  left: -16px;
+  left: -2vmin;
   position: absolute;
 }
-
 .image_marker_right {
-  right: -16px;
+  right: -2vmin;
   position: absolute;
 }
-
 .item {
   position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-
 .item_textbox_right {
   @include tablet {
-  width: 220px;
-  height: 240px;
   margin-left: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
   @include desktop {
-    width: 220px;
-    height: 240px;
     margin-left: 20px;
     display: flex;
     justify-content: center;
@@ -446,12 +363,9 @@ body {
     margin-right: 0;
   }
 }
-
 .item_textbox_left {
   @include tablet {
   margin-right: 20px;
-  width: 220px;
-  height: 240px;
   text-align: right;
   display: flex;
   justify-content: center;
@@ -459,8 +373,6 @@ body {
 }
   @include desktop {
   margin-right: 20px;
-  width: 220px;
-  height: 240px;
   text-align: right;
   display: flex;
   justify-content: center;
@@ -473,28 +385,76 @@ body {
     margin-right: 0;
   }
 }
-
-
+/* ====================== Videos ====================== */
+.showcase_grid {
+  width: 100%;
+  box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  padding: 7vh 0;
+  margin-top:20px;
+  margin-bottom: 20px;
+  grid-auto-rows: auto;
+  grid-gap: .5vw;
+  grid-template-columns: repeat(2, 49vw);
+  grid-template-rows: 49vw;
+  grid-template-areas:
+    "video1 video2";
+  justify-content: center;
+  @include phone {
+    grid-template-columns: 95vmin;
+    grid-template-rows: 95vmin;
+    grid-template-areas:
+    "video1"
+    "video2";
+  }
+}
+.video_1_box {
+  -ms-grid-column: 1;
+  -ms-grid-row:1;
+  grid-area: video1;
+  position: relative;
+    @include phone {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+    }    
+  }
+.video_2_box {
+  -ms-grid-column: 2;
+  -ms-grid-row:1;
+  grid-area: video2;
+  position: relative;
+    @include phone {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+    }
+  }
+.video1 {
+  width: 49vw;
+  @include phone {
+    width: 95vmin;
+  }
+}
+.video2 {
+  width: 49vw;
+  @include phone {
+    width: 95vmin;
+  }
+}
 .row_testimonial {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
 }
-
 .textbox_testimonial {
   width: 50%;
   text-align: center;
 }
-
-// .textbox_testimonial a {
-//   text-transform:uppercase;
-// }
-
 .textbox_testimonial_link {
   margin-top: 15px;
   text-transform: uppercase;
 }
-
 .row_banner {
   height: 200px;
   background-image: url('../images/jason-wong-351890-banner.jpg');
@@ -502,7 +462,7 @@ body {
   background-position: center center;
   margin-bottom: 30px;
 }
-
+/* ====================== Footer ====================== */
 footer {
   background-color: $bgaccent;
   height: 100px;
@@ -530,7 +490,6 @@ footer {
   display: inline-block;
   margin-right: 15px;
 }
-
 .small_footer {
   height: auto;
   background-color: $bgaccent;
@@ -556,33 +515,26 @@ footer {
 .footer_ul_contact li {
   margin-top: 20px;
 }
-
-
+/* ====================== Testimonials ====================== */
 .testimonials_container {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: $bgaccent;
 }
-
-
-//for slideshow
-
+/* ====================== Slideshow ====================== */
 .hidden {
   display: none;
 }
-
 .slideshow_container {
   margin: 0;
   max-width: 750px;
   margin:10vh auto 10vh auto;
   text-align: center;
 }
-
 .slideshow_container > div {
   display: inline-block;
 }
-
 #slideshow {
   margin: auto;
   position: relative;
@@ -599,7 +551,6 @@ footer {
 	width: 620px;
   height: 200px;
 }
-
 #slideshow > div {
 	position: absolute;
 	top: 0; 
@@ -607,13 +558,11 @@ footer {
 	right: 0; 
 	bottom: 0; 
 }
-
 #slideshow img {
 	width: 100%;
   margin: auto;
   border: solid 1px $darkgray;
 }
-
 .arrow {
   width: 40px;
   font-size: 64px;
@@ -630,14 +579,12 @@ footer {
     line-height: 200px;
   }
 }
-
 .arrowL {
   @include phone{
   position: absolute;
   left: 0;
   }
 }
-
 .arrowR {
   @include phone {
     position: absolute;
