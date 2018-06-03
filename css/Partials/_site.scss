@@ -399,8 +399,8 @@ body {
   margin-bottom: 20px;
   grid-auto-rows: auto;
   grid-gap: .5vw;
-  grid-template-columns: repeat(2, 49vw);
-  grid-template-rows: 49vw;
+  grid-template-columns: repeat(2, 40vw);
+  grid-template-rows: 40vw;
   grid-template-areas:
     "video1 video2";
   justify-content: center;
@@ -433,13 +433,13 @@ body {
     }
   }
 .video1 {
-  width: 49vw;
+  width: 40vw;
   @include phone {
     width: 95vmin;
   }
 }
 .video2 {
-  width: 49vw;
+  width: 40vw;
   @include phone {
     width: 95vmin;
   }
