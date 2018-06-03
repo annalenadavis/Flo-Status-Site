@@ -32,28 +32,28 @@
                   <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" title="instagram page"></i></a></li>
                 </ul>
               </div>
-            <div class="nav">
+            <nav class="nav">
               <ul>
                 <li><a href="http://www.flowsandiego.com/meet_stefan">Meet Stefan</a></li>
                 <li><a href="http://www.flowsandiego.com/testimonials">Testimonials</a></li>
-                <li><a href="#" class="start_today">Start Today</a></li>
+                <li><a href="#" class="start_today" id="start_today">Start Today</a></li>
               </ul>
-            </div>
-            <div class="tablet_nav">
+            </nav>
+            <nav class="tablet_nav">
               <li><a target="_blank" href="https://www.yelp.com/biz/flow-fitness-in-striking-san-diego-3"><i class="fa fa-yelp" title="Yelp reviews"></i></a></li>
               <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" title="facebook page"></i></a></li>
               <li><a target="_blank" href="https://www.instagram.com/flowsandiego/"><i class="fa fa-instagram" title="instagram page"></i></a></li>
               <li class="menu_bars"><a href="#"><i class="fa fa-bars" id="menuBtn" title="menu button"></i></a></li>
-            </div><!--end tablet_nav-->
+            </nav><!--end tablet_nav-->
           </div> <!-- end div grid -->
         </header>
-                    <div class="tablet_nav_dropdown" id="tabletNavDropdown">
+                    <nav class="tablet_nav_dropdown" id="tabletNavDropdown">
                       <ul>
-                        <li><a href="http://www.flowsandiego.com/meet_stefan">Meet Stefan</a></li>
+                        <li><a href="http://www.flowsandiego.com">Home</a></li>
                         <li><a href="http://www.flowsandiego.com/testimonials">Testimonials</a></li>
-                        <li><a href="#" class="start_today">Start Today</a></li>
+                        <li><a href="#" class="start_today" id="start_today">Start Today</a></li>
                       </ul>
-                    </div><!--nav dropdown end -->
+                    </nav><!--nav dropdown end -->
 
             <div class="bio_grid">
                 <div class="bio">
@@ -73,28 +73,51 @@
                 <div class="bio_photo">
                     <img src="images/stefan_crop.jpg" alt="image of Stefan with black belt">
                 </div>
-
             </div>        
 
-            <div class=slideshow_container>
-              <a href="#!" class="arrowL arrow" role="button" aria-label="click left">&lt;</a>
-              <div id="slideshow">
-                <div><img src="images/stefan_3.jpg"/></div>
-                <div class="hidden"><img src="images/stefan_4.jpg" alt="Stefan practicing martial arts"/></div>
-                <div class="hidden"><img src="images/stefan_1.jpg" alt="Stefan in Muay Thai fight"/></div>
-                <div class="hidden"><img src="images/group.jpg" alt="Stefan and others who train in Muay Thai"/></div>
-                <div class="hidden"><img src="images/group2.jpg" alt="Steel Mixed Martial Arts group shot"/></div>
-                <div class="hidden"><img src="images/stefan_2.jpg" alt="Group of five martial artists"/></div>
-              </div>
-              <a href="#!" class="arrowR arrow" role="button" aria-label="click right">&gt;</a>
-            </div>
+              <ul class="instructor_photos">
+                  <li>
+                    <picture>
+                      <source media="(min-width: 400px)" srcset="images/stefan_3.jpg">
+                      <img src="images/mini_stefan_3.jpg" alt="Stefan training at gym">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                        <source media="(min-width: 400px)" srcset="images/stefan_4.jpg">
+                        <img src="images/mini_stefan_4.jpg" alt="Stefan practicing martial arts">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                        <source media="(min-width: 400px)" srcset="images/stefan_1.jpg">
+                        <img src="images/mini_stefan_1.jpg" alt="Stefan in Muay Thai fight">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                        <source media="(min-width: 400px)" srcset="images/group.jpg">
+                        <img src="images/mini_group.jpg" alt="Stefan and others who train in Muay Thai">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                        <source media="(min-width: 400px)" srcset="images/group2.jpg">
+                        <img src="images/mini_group2.jpg" alt="Steel Mixed Martial Arts group shot">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                        <source media="(min-width: 400px)" srcset="images/stefan_2.jpg">
+                        <img src="images/mini_stefan_2.jpg" alt="Group of five martial artists">
+                    </picture>
+                  </li>
+              </ul>
 
-                    <div class="row row_banner">
-
-                    </div><!--end row-->
+                    <div class="row row_banner"></div><!--end row-->
               
                     <form name="contact" data-netlify="true" aria-label="contact form" tabindex="0">
-                      <h1 class="start_today_header">Start Training Today</h1>
+                      <h1 class="start_today_header" id="start_today_header">Start Training Today</h1>
                         <label for='first_name'>First Name:</label>
                         <input type="text" id="first_name" name="first_name">
               
@@ -116,7 +139,7 @@
                        <div class="large_footer">
                          <ul>
                            <a href="http://www.flowsandiego.com/"><img src="images/flow_logo_tagline.png" alt="Flow fitness in striking logo" class="logo_img_small"></a>
-                             <li><p>(858) 633-3692</p></li>
+                            <li><a href="tel:18586333692">(858) 633-3692</a></li>  
                              <li><a href="mailto:stefan@flowsandiego.com">stefan@flowsandiego.com</a><li>
                              <li><a target="_blank" href="https://www.yelp.com/biz/flow-fitness-in-striking-san-diego-3"><i class="fa fa-yelp" title="Yelp reviews"></i></a></li>
                              <li><a target="_blank" href="https://www.facebook.com/flowfitnessinstriking/"><i class="fa fa-facebook-square" title="facebook page"></i></a></li>
@@ -139,7 +162,7 @@
               
               
                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" async></script>
-                       <script src="js/global.js" async></script>
+                      <script src="js/global.js" async></script>
 
 
                   </body>

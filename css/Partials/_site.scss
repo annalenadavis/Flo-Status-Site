@@ -15,7 +15,7 @@ body {
 /* ====================== Scroll Header ====================== */
 .scroll_header {
   background-color: $lightblue;
-  height: 50px;
+  height: 60px;
   width: 100vw;
   color: white;
   z-index: 200;
@@ -92,8 +92,7 @@ body {
 }
 .logo_img {
   width: 200px;
-  padding-left: 25px;
-  padding-top: 10px;
+  padding: 10px 0 0 25px;
   @include phone {
     width: 150px;
     padding-left: 0;
@@ -212,8 +211,7 @@ body {
 .main_row {
   width: 75vw;
   margin: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 .main_row h2 {
   padding-left: 25px;
@@ -304,6 +302,8 @@ body {
               url("../images/beach_training.jpg");
   @include phone {
     height: 60vmin;
+    background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
+              url("../images/beach_training-small.jpg");
   }
 }
 .image_2 {
@@ -312,6 +312,8 @@ body {
               url("../images/garage_training.jpg");
   @include phone {
     height: 60vmin;
+    background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
+    url("../images/garage_training-small.jpg");
   }
 }
 .image_3 {
@@ -320,6 +322,8 @@ body {
               url("../images/gloves.jpg");
   @include phone {
     height: 60vmin;
+    background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
+    url("../images/gloves-small.jpg");
   }
 }
 .image_marker {
@@ -360,7 +364,6 @@ body {
     text-align: center;
     justify-content:flex-start;
     margin: 30px 0 40px 0;
-    margin-right: 0;
   }
 }
 .item_textbox_left {
@@ -382,7 +385,6 @@ body {
     text-align: center;
     justify-content:flex-start;
     margin: 30px 0 40px 0;
-    margin-right: 0;
   }
 }
 /* ====================== Videos ====================== */
@@ -447,7 +449,7 @@ body {
   justify-content: center;
   padding-bottom: 50px;
 }
-.textbox_testimonial {
+.textbox_testimonial_main {
   width: 50%;
   text-align: center;
 }
@@ -469,8 +471,7 @@ footer {
 }
 .logo_img_small {
   width: 160px;
-  padding-left: 25px;
-  padding-top: 15px;
+  padding: 15px 0 0 25px;
   float: left;
   @include phone {
     padding: 20px;
@@ -515,79 +516,19 @@ footer {
 .footer_ul_contact li {
   margin-top: 20px;
 }
-/* ====================== Testimonials ====================== */
+/* ====================== Testimonials Page ====================== */
 .testimonials_container {
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
   background-color: $bgaccent;
 }
-/* ====================== Slideshow ====================== */
-.hidden {
-  display: none;
-}
-.slideshow_container {
-  margin: 0;
-  max-width: 750px;
-  margin:10vh auto 10vh auto;
+.textbox_testimonial {
+  width: 75%;
   text-align: center;
 }
-.slideshow_container > div {
-  display: inline-block;
+.testimonials_container h1 {
+  padding-bottom: 3vh;
 }
-#slideshow {
-  margin: auto;
-  position: relative;
-  @include tablet {
-    width: 520px;
-    height: 167px;
-  }
-  @include phone {
-    width: 75vw;
-    max-width: 300px;
-    margin: auto;
-    height: 180px;
-  }
-	width: 620px;
-  height: 200px;
-}
-#slideshow > div {
-	position: absolute;
-	top: 0; 
-	left: 0; 
-	right: 0; 
-	bottom: 0; 
-}
-#slideshow img {
-	width: 100%;
-  margin: auto;
-  border: solid 1px $darkgray;
-}
-.arrow {
-  width: 40px;
-  font-size: 64px;
-  display: inline-block;
-  color: $blue;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 400px;
-  font-weight: bold;
-  padding: 0 10px;
-  @include phone {
-    font-size: 32px;
-    line-height: 200px;
-  }
-}
-.arrowL {
-  @include phone{
-  position: absolute;
-  left: 0;
-  }
-}
-.arrowR {
-  @include phone {
-    position: absolute;
-    right: 0;
-  }
+.testimonials_container p {
+  padding: 2vh 0;
 }

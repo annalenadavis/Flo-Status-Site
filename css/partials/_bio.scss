@@ -7,6 +7,7 @@
     padding-bottom: 20px;
     grid-auto-rows: auto;
     grid-gap: 10px;
+    align-items: center;
     grid-template-areas:
       "bio photo";
       justify-content: center;
@@ -23,89 +24,116 @@
       text-align: center;
     }
   }
-
-  .bio {
-      grid-area: bio;
-      -ms-grid-column: 1;
-      -ms-grid-row: 1;
-      @include phone {
-        -ms-grid-column: 1;
-        -ms-grid-row: 1; 
-      }
-  }
-  .bio h1 {
-      margin-left: 11vw;
-  }
-  .bio_container {
-      margin-left: 15vw;
-      margin-right: 5vw;
-      @include phone {
-        margin-left: 5vw;
-      }
-  }
-  .bio_photo {
-      grid-area: photo;
-      -ms-grid-column: 2;
-      -ms-grid-row: 1;
-      @include phone {
-        -ms-grid-column: 1;
-        -ms-grid-row: 2; 
-      }
-  }
-
-  .bio_photo img {
-    margin: 40px;
-    max-width: 265px;
+.bio {
+    grid-area: bio;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
     @include phone {
-      margin: 0;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1; 
     }
-  }
-
-  .slideshow {
-    margin: 80px auto;
-    position: relative;
-    width: 520px;
-    height: 347px;
-    padding: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  }
-  
-  // .slideshow > li {
-  //   position: absolute;
-  //   top: 10px;
-  //   left: 10px;
-  //   right: 10px;
-  //   bottom: 10px;
-  // }
-
-  .slideshow_slides li {
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    display: none;
-    text-align: center;
 }
-
-.slideshow_controls {
+.bio h1 {
+    margin-left: 11vw;
+    padding: 0 0 3vh;
+}
+.bio_container {
+    margin-left: 15vw;
+    margin-right: 5vw;
+    @include phone {
+      margin-left: 5vw;
+    }
+}
+.bio_photo {
+    grid-area: photo;
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    @include phone {
+      -ms-grid-column: 1;
+      -ms-grid-row: 2; 
+    }
+}
+.bio_photo img {
+  padding-top: 5vh;
+  max-height: 400px;
+  @include phone {
+    margin: 0;
+  }
+}
+.instructor_photos {
+  background-color: $bgaccent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto; 
+  padding: 10vh 0;
+}
+.instructor_photos li {
+  width: 45vw;
+  margin: 15px;
+  @include phone {
+    width: 90vw;
+  }
+  @include tablet {
+    width: 90vw;
+  }
+}
+.instructor_photos img {
+  min-width: 100%;
   width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 120px;
-  text-align: center;
 }
-.slideshow_controls li {
-  display: inline-block;
-  margin: 0 20px;
-  cursor: pointer;
-  color: white;
-  opacity: 0.5;
-  font-family: Arial;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1.2px;
-  text-shadow: 1px 1px rgba(0,0,0,.35);
+.instructor_photos picture {
+  min-width: 100%;
+  width: 100%;
 }
-.slideshow_controls li.active {
-  opacity: 1;
-}
+
+
+//   .slideshow {
+//     margin: 80px auto;
+//     position: relative;
+//     width: 520px;
+//     height: 347px;
+//     padding: 10px;
+//     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+//   }
+  
+//   // .slideshow > li {
+//   //   position: absolute;
+//   //   top: 10px;
+//   //   left: 10px;
+//   //   right: 10px;
+//   //   bottom: 10px;
+//   // }
+
+//   .slideshow_slides li {
+//     height: 100%;
+//     background-size: cover;
+//     background-position: center center;
+//     display: none;
+//     text-align: center;
+// }
+
+// .slideshow_controls {
+//   width: 100%;
+//   position: absolute;
+//   left: 0;
+//   bottom: 120px;
+//   text-align: center;
+// }
+// .slideshow_controls li {
+//   display: inline-block;
+//   margin: 0 20px;
+//   cursor: pointer;
+//   color: white;
+//   opacity: 0.5;
+//   font-family: Arial;
+//   font-size: 14px;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   letter-spacing: 1.2px;
+//   text-shadow: 1px 1px rgba(0,0,0,.35);
+// }
+// .slideshow_controls li.active {
+//   opacity: 1;
+// }

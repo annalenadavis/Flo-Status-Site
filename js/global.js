@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 //Toggle the nav dropdown menu on tablets/phones with menu button
 $("#menuBtn").click(function(event){
   $("#tabletNavDropdown").slideToggle();
@@ -18,7 +17,6 @@ $(".tablet_nav_dropdown_background").click(function(){
   $(".tablet_nav_dropdown_background").slideToggle();
 });
 
-
 //Scroll to Sign-up form when "Start Today" is clicked
 $(".start_today").click(function(event){
   const slideTarget = $(".start_today_header");
@@ -28,55 +26,23 @@ $(".start_today").click(function(event){
 }); //click method end
 
 
-//Slideshow on Meet Stefan page
-//Automatic to Manual slideshow
-
-var main = function() {
-
-	var paused = false
-
-	$('.arrowR').click(function() {
-		paused = true;
-		$('#slideshow > div:first')
-		.fadeOut(1000)
-		.next()
-		.fadeIn(1000)
-		.end()
-		.appendTo('#slideshow');
-	});
-		
-	$('.arrowL').click(function() {
-		paused = true;
-		$('#slideshow > div:last')
-		.fadeIn(1000)
-		.prependTo('#slideshow')
-		.next()
-		.fadeOut(1000)
-		.end();
-	});
-	
-	setInterval(function() {
-		if (paused === false) { 
-			$('#slideshow > div:first')
-			.fadeOut(1000)
-			.next()
-			.fadeIn(1000)
-			.end()
-			.appendTo('#slideshow');
-		};
-	},  5000);
-};
-
-$(document).ready(main);
-
-
-
-
-
-
-
-
-
-
 
 }); // ready method end
+
+
+// // Scroll to sign-up form 
+// // But not enough browser support! Check for other JS options?
+// const startToday = document.getElementById("start_today");
+// const slideTarget = document.getElementById("start_today_header");
+
+// console.dir(slideTarget);
+
+// function scrollToTarget(){
+//   slideTarget.scrollIntoView(true);
+//   // window.scroll({ 
+//   //   top: startToday,
+//   //   behavior: "smooth"
+//   // });
+// }
+
+// startToday.addEventListener("click", scrollToTarget);

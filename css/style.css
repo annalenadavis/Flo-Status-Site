@@ -64,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
 .fa {
   color: #fca90b;
   font-size: 2.8rem;
@@ -94,7 +98,7 @@ body {
 /* ====================== Scroll Header ====================== */
 .scroll_header {
   background-color: #228bdb;
-  height: 50px;
+  height: 60px;
   width: 100vw;
   color: white;
   z-index: 200;
@@ -191,8 +195,7 @@ body {
 
 .logo_img {
   width: 200px;
-  padding-left: 25px;
-  padding-top: 10px;
+  padding: 10px 0 0 25px;
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -347,8 +350,7 @@ body {
 .main_row {
   width: 75vw;
   margin: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
 .main_row h2 {
@@ -447,6 +449,7 @@ body {
 @media (min-width: 300px) and (max-width: 699px) {
   .image_1 {
     height: 60vmin;
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/beach_training-small.jpg");
   }
 }
 
@@ -458,6 +461,7 @@ body {
 @media (min-width: 300px) and (max-width: 699px) {
   .image_2 {
     height: 60vmin;
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/garage_training-small.jpg");
   }
 }
 
@@ -469,6 +473,7 @@ body {
 @media (min-width: 300px) and (max-width: 699px) {
   .image_3 {
     height: 60vmin;
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/gloves-small.jpg");
   }
 }
 
@@ -520,7 +525,6 @@ body {
     text-align: center;
     justify-content: flex-start;
     margin: 30px 0 40px 0;
-    margin-right: 0;
   }
 }
 
@@ -549,7 +553,6 @@ body {
     text-align: center;
     justify-content: flex-start;
     margin: 30px 0 40px 0;
-    margin-right: 0;
   }
 }
 
@@ -633,7 +636,7 @@ body {
   padding-bottom: 50px;
 }
 
-.textbox_testimonial {
+.textbox_testimonial_main {
   width: 50%;
   text-align: center;
 }
@@ -659,8 +662,7 @@ footer {
 
 .logo_img_small {
   width: 160px;
-  padding-left: 25px;
-  padding-top: 15px;
+  padding: 15px 0 0 25px;
   float: left;
 }
 
@@ -725,99 +727,24 @@ footer {
   margin-top: 20px;
 }
 
-/* ====================== Testimonials ====================== */
+/* ====================== Testimonials Page ====================== */
 .testimonials_container {
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
   background-color: #ebebeb;
 }
 
-/* ====================== Slideshow ====================== */
-.hidden {
-  display: none;
-}
-
-.slideshow_container {
-  margin: 0;
-  max-width: 750px;
-  margin: 10vh auto 10vh auto;
+.textbox_testimonial {
+  width: 75%;
   text-align: center;
 }
 
-.slideshow_container > div {
-  display: inline-block;
+.testimonials_container h1 {
+  padding-bottom: 3vh;
 }
 
-#slideshow {
-  margin: auto;
-  position: relative;
-  width: 620px;
-  height: 200px;
-}
-
-@media (min-width: 700px) and (max-width: 991px) {
-  #slideshow {
-    width: 520px;
-    height: 167px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 699px) {
-  #slideshow {
-    width: 75vw;
-    max-width: 300px;
-    margin: auto;
-    height: 180px;
-  }
-}
-
-#slideshow > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#slideshow img {
-  width: 100%;
-  margin: auto;
-  border: solid 1px #666666;
-}
-
-.arrow {
-  width: 40px;
-  font-size: 64px;
-  display: inline-block;
-  color: #1778c4;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 400px;
-  font-weight: bold;
-  padding: 0 10px;
-}
-
-@media (min-width: 300px) and (max-width: 699px) {
-  .arrow {
-    font-size: 32px;
-    line-height: 200px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 699px) {
-  .arrowL {
-    position: absolute;
-    left: 0;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 699px) {
-  .arrowR {
-    position: absolute;
-    right: 0;
-  }
+.testimonials_container p {
+  padding: 2vh 0;
 }
 
 *, *:before, *:after {
@@ -1063,6 +990,7 @@ label.light {
   padding-bottom: 20px;
   grid-auto-rows: auto;
   grid-gap: 10px;
+  align-items: center;
   grid-template-areas: "bio photo";
   justify-content: center;
   -ms-grid-columns: 4fr 3fr;
@@ -1095,6 +1023,7 @@ label.light {
 
 .bio h1 {
   margin-left: 11vw;
+  padding: 0 0 3vh;
 }
 
 .bio_container {
@@ -1122,8 +1051,8 @@ label.light {
 }
 
 .bio_photo img {
-  margin: 40px;
-  max-width: 265px;
+  padding-top: 5vh;
+  max-height: 400px;
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -1132,46 +1061,40 @@ label.light {
   }
 }
 
-.slideshow {
-  margin: 80px auto;
-  position: relative;
-  width: 520px;
-  height: 347px;
-  padding: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+.instructor_photos {
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+  padding: 10vh 0;
 }
 
-.slideshow_slides li {
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  display: none;
-  text-align: center;
+.instructor_photos li {
+  width: 45vw;
+  margin: 15px;
 }
 
-.slideshow_controls {
+@media (min-width: 300px) and (max-width: 699px) {
+  .instructor_photos li {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .instructor_photos li {
+    width: 90vw;
+  }
+}
+
+.instructor_photos img {
+  min-width: 100%;
   width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 120px;
-  text-align: center;
 }
 
-.slideshow_controls li {
-  display: inline-block;
-  margin: 0 20px;
-  cursor: pointer;
-  color: white;
-  opacity: 0.5;
-  font-family: Arial;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1.2px;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
-}
-
-.slideshow_controls li.active {
-  opacity: 1;
+.instructor_photos picture {
+  min-width: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

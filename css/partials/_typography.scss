@@ -60,6 +60,9 @@ a {
   font-size: 2rem;
   text-decoration: none;
 }
+a:focus, a:hover {
+  text-decoration: underline;
+}
 
 .fa {
   color: $yellow;
