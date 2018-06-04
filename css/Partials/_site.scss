@@ -202,6 +202,7 @@ body {
   box-sizing: border-box;
 }
 .content {
+  box-sizing: border-box;
   width: 100vmin;
   margin: auto;
   @include phone {
@@ -209,7 +210,7 @@ body {
   }
 }
 .main_row {
-  width: 75vw;
+  box-sizing: border-box;
   margin: auto;
   padding: 40px 0;
 }
