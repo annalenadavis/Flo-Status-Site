@@ -1,4 +1,5 @@
-﻿# Flow:Fitness in Striking-Website Design & Development
+Flow:Fitness in Striking-Website Design & Development
+============================================================
 
 I designed and built this custom website for a Personal Martial Arts Trainer. 
 The site features an explanation of what is offered, videos of training sessions, 
@@ -13,3 +14,7 @@ CSS-Grid and Flexbox
 JavaScript and jQuery
 
 ![alt tag](https://github.com/annalenadavis/bootstrap-portfolio/blob/master/img/flow/finaldesign.jpg "Site Design")
+
+Getting Started
+-------------------------------
+No requirements or dependencies. Just clone and open pages in browser.
