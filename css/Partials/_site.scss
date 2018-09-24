@@ -116,9 +116,6 @@ body {
   display: inline-block;
   margin-right: 10px;
 }
-.fa {
-  padding: 5px;
-}
 .nav {
   -ms-grid-column: 2;
   -ms-grid-row:2;
@@ -433,13 +430,7 @@ body {
       -ms-grid-column: 1;
     }
   }
-.video1 {
-  width: 40vw;
-  @include phone {
-    width: 95vmin;
-  }
-}
-.video2 {
+.video {
   width: 40vw;
   @include phone {
     width: 95vmin;

@@ -64,12 +64,17 @@ a:focus, a:hover {
   text-decoration: underline;
 }
 
-.fa {
-  color: $yellow;
-  font-size: 2.8rem;
-}
-
 .light {
   color: $darkgray;
   font-size: 1.8rem;
+}
+
+.icon {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  stroke-width: 0;
+  stroke: $yellow;
+  fill: $yellow;
+  margin: 0px 7px;
 }

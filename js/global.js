@@ -31,13 +31,13 @@ $(".start_today").click(function(event){
 
 
 // // Scroll to sign-up form 
-// // But not enough browser support! Check for other JS options?
-// const startToday = document.getElementById("start_today");
+// const startToday = document.querySelectorAll(".start_today");
 // const slideTarget = document.getElementById("start_today_header");
 
 // console.dir(slideTarget);
 
-// function scrollToTarget(){
+// function scrollToTarget(e){
+//   e.preventDefault;
 //   slideTarget.scrollIntoView(true);
 //   // window.scroll({ 
 //   //   top: startToday,
@@ -45,4 +45,6 @@ $(".start_today").click(function(event){
 //   // });
 // }
 
-// startToday.addEventListener("click", scrollToTarget);
+// // startToday.addEventListener("click", scrollToTarget);
+// const startTodayBtns = Array.from(document.querySelectorAll('.start_today'));
+// startTodayBtns.forEach(btn => btn.addEventListener('click', scrollToTarget));
