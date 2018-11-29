@@ -215,16 +215,19 @@ body {
   padding-left: 25px;
 }
 .main_grid {
-  width: 50%;
   margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 240px;
-  grid-template-columns: repeat(2, 40vmin);
+  grid-template-columns: repeat(2, 50vmin);
   -ms-grid-rows: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 40vmin);
+  grid-template-rows: repeat(3, 50vmin);
   justify-content: center;
   align-items: center;
+  @include tablet {
+    grid-template-columns: repeat(2, 40vmin);
+    grid-template-rows: repeat(3, 40vmin);
+  }
   @include phone {
     grid-template-columns: 60vmin;
     grid-template-rows: min-content;
@@ -295,9 +298,12 @@ body {
   }
 }
 .image_1 {
-  height: 40vmin;
+  height: 50vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
               url("../images/beach_training.jpg");
+  @include tablet {
+    height: 40vmin;
+  }
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
@@ -305,23 +311,29 @@ body {
   }
 }
 .image_2 {
-  height: 40vmin;
+  height: 50vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/garage_training.jpg");
+              url("../images/calumet_park_kickboxing.jpg");
+  @include tablet {
+    height: 40vmin;
+  }
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-    url("../images/garage_training-small.jpg");
+    url("../images/calumet_park_kickboxing_small.jpg");
   }
 }
 .image_3 {
-  height: 40vmin;
+  height: 50vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/gloves.jpg");
+              url("../images/san_diego_beach.jpg");
+  @include tablet {
+    height: 40vmin;
+  }
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-    url("../images/gloves-small.jpg");
+    url("../images/san_diego_beach_small.jpg");
   }
 }
 .image_marker {
@@ -347,13 +359,13 @@ body {
 }
 .item_textbox_right {
   @include tablet {
-  margin-left: 20px;
+  margin-left: 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
   @include desktop {
-    margin-left: 20px;
+    margin-left: 5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -366,14 +378,14 @@ body {
 }
 .item_textbox_left {
   @include tablet {
-  margin-right: 20px;
+  margin-right: 3rem;
   text-align: right;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
   @include desktop {
-  margin-right: 20px;
+  margin-right: 5rem;
   text-align: right;
   display: flex;
   justify-content: center;
@@ -383,6 +395,31 @@ body {
     text-align: center;
     justify-content:flex-start;
     margin: 30px 0 40px 0;
+  }
+}
+.content_overview {
+  text-align: center;
+  margin: 7rem 1rem;
+  @include phone {
+    margin: 1rem;
+  }
+}
+.content_overview_div {
+  margin-top: 6rem;
+}
+hr {
+  margin: 2rem 0;
+  background-color: $blue;
+  height: 2px;
+}
+ul.content_overview_list {
+  list-style: circle inside;
+}
+ul.content_overview_list li {
+  font-size: 2.1rem;
+  line-height: 2;
+  @include phone {
+    font-size: 1.6rem;
   }
 }
 /* ====================== Videos ====================== */

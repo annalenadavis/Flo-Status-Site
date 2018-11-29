@@ -73,6 +73,16 @@ a:focus, a:hover {
   font-size: 1.8rem;
 }
 
+.heavy {
+  font-size: 2.8rem;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .heavy {
+    font-size: 2.2rem;
+  }
+}
+
 .icon {
   display: inline-block;
   width: 2.8rem;
@@ -371,20 +381,28 @@ body {
 }
 
 .main_grid {
-  width: 50%;
   margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 240px;
-  grid-template-columns: repeat(2, 40vmin);
+  grid-template-columns: repeat(2, 50vmin);
   -ms-grid-rows: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 40vmin);
+  grid-template-rows: repeat(3, 50vmin);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .main_grid {
+    -ms-grid-columns: (40vmin)[2];
+        grid-template-columns: repeat(2, 40vmin);
+    -ms-grid-rows: (40vmin)[3];
+        grid-template-rows: repeat(3, 40vmin);
+  }
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -462,9 +480,15 @@ body {
 }
 
 .image_1 {
-  height: 40vmin;
+  height: 50vmin;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/beach_training.jpg");
   background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/beach_training.jpg");
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .image_1 {
+    height: 40vmin;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -476,30 +500,42 @@ body {
 }
 
 .image_2 {
-  height: 40vmin;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/garage_training.jpg");
-  background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/garage_training.jpg");
+  height: 50vmin;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/calumet_park_kickboxing.jpg");
+  background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/calumet_park_kickboxing.jpg");
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .image_2 {
+    height: 40vmin;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
   .image_2 {
     height: 60vmin;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/garage_training-small.jpg");
-    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/garage_training-small.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/calumet_park_kickboxing_small.jpg");
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/calumet_park_kickboxing_small.jpg");
   }
 }
 
 .image_3 {
-  height: 40vmin;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/gloves.jpg");
-  background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/gloves.jpg");
+  height: 50vmin;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/san_diego_beach.jpg");
+  background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/san_diego_beach.jpg");
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .image_3 {
+    height: 40vmin;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
   .image_3 {
     height: 60vmin;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/gloves-small.jpg");
-    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/gloves-small.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/san_diego_beach_small.jpg");
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/san_diego_beach_small.jpg");
   }
 }
 
@@ -530,7 +566,7 @@ body {
 
 @media (min-width: 700px) and (max-width: 991px) {
   .item_textbox_right {
-    margin-left: 20px;
+    margin-left: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -546,7 +582,7 @@ body {
 
 @media (min-width: 992px) {
   .item_textbox_right {
-    margin-left: 20px;
+    margin-left: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -572,7 +608,7 @@ body {
 
 @media (min-width: 700px) and (max-width: 991px) {
   .item_textbox_left {
-    margin-right: 20px;
+    margin-right: 3rem;
     text-align: right;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -589,7 +625,7 @@ body {
 
 @media (min-width: 992px) {
   .item_textbox_left {
-    margin-right: 20px;
+    margin-right: 5rem;
     text-align: right;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -611,6 +647,42 @@ body {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin: 30px 0 40px 0;
+  }
+}
+
+.content_overview {
+  text-align: center;
+  margin: 7rem 1rem;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  .content_overview {
+    margin: 1rem;
+  }
+}
+
+.content_overview_div {
+  margin-top: 6rem;
+}
+
+hr {
+  margin: 2rem 0;
+  background-color: #1778c4;
+  height: 2px;
+}
+
+ul.content_overview_list {
+  list-style: circle inside;
+}
+
+ul.content_overview_list li {
+  font-size: 2.1rem;
+  line-height: 2;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+  ul.content_overview_list li {
+    font-size: 1.6rem;
   }
 }
 
