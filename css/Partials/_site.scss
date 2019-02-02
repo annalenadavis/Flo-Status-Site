@@ -300,14 +300,14 @@ body {
 .image_1 {
   height: 50vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/beach_training.jpg");
+              url("../images/san_diego_beach.jpg");
   @include tablet {
     height: 40vmin;
   }
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/beach_training-small.jpg");
+              url("../images/san_diego_beach-small.jpg");
   }
 }
 .image_2 {
@@ -326,14 +326,14 @@ body {
 .image_3 {
   height: 50vmin;
   background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/san_diego_beach.jpg");
+              url("../images/muay_thai.jpg");
   @include tablet {
     height: 40vmin;
   }
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-    url("../images/san_diego_beach_small.jpg");
+    url("../images/muay_thai_small.jpg");
   }
 }
 .image_marker {
