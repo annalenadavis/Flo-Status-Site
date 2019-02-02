@@ -494,8 +494,8 @@ body {
 @media (min-width: 300px) and (max-width: 699px) {
   .image_1 {
     height: 60vmin;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/san_diego_beach-small.jpg");
-    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/san_diego_beach-small.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/san_diego_beach_small.jpg");
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/san_diego_beach_small.jpg");
   }
 }
 
@@ -534,8 +534,8 @@ body {
 @media (min-width: 300px) and (max-width: 699px) {
   .image_3 {
     height: 60vmin;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/muay_thai_small.jpg");
-    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/muay_thai_small.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 152, 240, 0.6)), to(rgba(43, 152, 240, 0))), url("../images/muay_thai-small.jpg");
+    background: linear-gradient(to bottom, rgba(43, 152, 240, 0.6), rgba(43, 152, 240, 0)), url("../images/muay_thai-small.jpg");
   }
 }
 

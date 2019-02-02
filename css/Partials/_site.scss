@@ -307,7 +307,7 @@ body {
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-              url("../images/san_diego_beach-small.jpg");
+              url("../images/san_diego_beach_small.jpg");
   }
 }
 .image_2 {
@@ -333,7 +333,7 @@ body {
   @include phone {
     height: 60vmin;
     background: linear-gradient(to bottom, rgba(43,152,240,.60), rgba(43,152,240,0)),
-    url("../images/muay_thai_small.jpg");
+    url("../images/muay_thai-small.jpg");
   }
 }
 .image_marker {
