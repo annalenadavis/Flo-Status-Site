@@ -693,7 +693,7 @@ ul.content_overview_list li {
   padding-top: 25px;
   height: 0;
   width: 80%;
-  margin: 0 auto 7vh;
+  margin: 75px auto 75px;
 }
 
 @media (min-width: 300px) and (max-width: 699px) {
@@ -904,6 +904,13 @@ footer {
 
 .testimonials_container h1 {
   padding-bottom: 3vh;
+  margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+  .testimonials_container h1 {
+    margin-top: 75px;
+  }
 }
 
 .testimonials_container p {
