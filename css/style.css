@@ -179,13 +179,15 @@ body {
 
 @media (min-width: 992px) {
   .header_grid {
-        grid-template-areas: "mainheader contact" "mainheader nav";
+        grid-template-areas: "mainheader contact"
+ "mainheader nav";
   }
 }
 
 @media (min-width: 700px) and (max-width: 991px) {
   .header_grid {
-        grid-template-areas: "mainheader tabletnav" "mainheader .";
+        grid-template-areas: "mainheader tabletnav"
+ "mainheader .";
   }
 }
 
@@ -195,7 +197,8 @@ body {
     -ms-grid-columns: 300px 1px;
     -ms-grid-rows: 100px 100px;
         grid-template-rows: 100px 100px;
-        grid-template-areas: "mainheader mainheader" "tabletnav tabletnav";
+        grid-template-areas: "mainheader mainheader"
+ "tabletnav tabletnav";
   }
 }
 
@@ -372,12 +375,22 @@ body {
 .main_row {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: auto;
-  padding: 40px 0;
+  margin: 0 calc(10% - 15px);
+  padding: 40px 0 0;
+}
+@media (min-width: 300px) and (max-width: 699px) {
+  .main_row {
+    margin: auto;
+    padding: 40px 0 0;
+  }
 }
 
 .main_row h2 {
   padding-left: 25px;
+}
+
+.main_row h1 {
+  padding-left: 15px;
 }
 
 .main_grid {
@@ -412,7 +425,12 @@ body {
     -ms-grid-rows: min-content;
         grid-template-rows: -webkit-min-content;
         grid-template-rows: min-content;
-        grid-template-areas: "row-1" "row-2" "row-3" "row-4" "row-5" "row-6";
+        grid-template-areas: "row-1"
+ "row-2"
+ "row-3"
+ "row-4"
+ "row-5"
+ "row-6";
   }
 }
 
@@ -740,7 +758,8 @@ ul.content_overview_list li {
         grid-template-columns: 95vmin;
     -ms-grid-rows: 95vmin;
         grid-template-rows: 95vmin;
-        grid-template-areas: "video1" "video2";
+        grid-template-areas: "video1"
+ "video2";
   }
 }
 
@@ -790,6 +809,12 @@ ul.content_overview_list li {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 50px;
+  margin-top: 80px;
+}
+@media (min-width: 300px) and (max-width: 699px) {
+  .row_testimonial {
+    margin-top: 40px;
+  }
 }
 
 .textbox_testimonial_main {
@@ -1183,7 +1208,8 @@ label.light {
     -ms-grid-rows: 450px 350px;
         grid-template-rows: 450px 350px;
     grid-template-columns: 300px;
-        grid-template-areas: "bio" "photo";
+        grid-template-areas: "bio"
+ "photo";
     text-align: center;
   }
 }
