@@ -1,4 +1,4 @@
-Flow:Fitness in Striking-Website Design & Development
+Flow:Movement Arts-Website Design & Development
 ============================================================
 
 I designed and built this custom website for a Personal Martial Arts Trainer. 
